@@ -11,6 +11,11 @@
 
 class ArticlesController < ApplicationController
   def index
-   @articles = Article.all
+    @articles = Article.all
+  end
+
+  # note that we can freely change the @article or @articles for the view part
+  def show
+    @article = Article.find(params[:id])
   end
 end
