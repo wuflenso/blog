@@ -3,15 +3,21 @@
 
 <h1>Articles</h1>
 
-<!-- The <% %> is somewhat like razor in asp.net. It adds a ruby functionality inside an html file -->
-<!-- The <%= %> is the same but we want the code result to show -->
+<!-- The <%  %> is somewhat like razor in asp.net. It adds a ruby functionality inside an html file -->
+<!-- The <%=  %> is the same but we want the code result to show -->
 
 <ul>
-<% @articles.each do |article|%>
-<li>
-<h5><%=article.title%></h5>
-<p><%=article.body%></p>
+    <% @articles.each do |article| %>
+        <li>
+            <h5>
+                <!-- Normally it is written like this: -->
+                <!--<a href="articles/<%= article.id %>">-->
 
-</li>
-<%end%>
+                <!-- but with "resources :articles" it becomes this...-->
+                <a href="<%= article_path(article)%>">
+                    <%= article.title %>
+            </h5>
+            </a>
+        </li>
+        <% end %>
 </ul>
