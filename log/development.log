@@ -1986,3 +1986,300 @@ Processing by ArticlesController#index as HTML
   [1m[36mArticle Load (0.4ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
   Rendered articles/index.html.erb within layouts/application (3.1ms)
 Completed 200 OK in 31ms (Views: 29.4ms | ActiveRecord: 0.4ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateComments (20210705043243)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.8ms)[0m  [1mCREATE TABLE "comments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "commenter" varchar, "body" text, "article_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.3ms)[0m  [1mCREATE  INDEX "index_comments_on_article_id" ON "comments" ("article_id")[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20210705043243"]]
+  [1m[36m (4.9ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.4ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_comments_on_article_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_comments_on_article_id' AND type='index'
+[0m
+
+
+Started GET "/" for 127.0.0.1 at 2021-07-05 11:49:14 +0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.2ms)[0m  SELECT "articles".* FROM "articles"
+  Rendered articles/index.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 480ms (Views: 467.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/comments.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2021-07-05 11:49:15 +0700
+
+
+Started GET "/assets/comments.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2021-07-05 11:49:15 +0700
+
+
+Started GET "/articles/1" for 127.0.0.1 at 2021-07-05 11:49:18 +0700
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (0.7ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered articles/show.html.erb within layouts/application (41.1ms)
+Completed 500 Internal Server Error in 66ms (ActiveRecord: 0.7ms)
+
+ActionView::Template::Error (undefined method `comments' for #<Article:0x00007f5ebde218c8>
+Did you mean?  committed!):
+    14: 
+    15: 
+    16: <h2>Add a comment:</h2>
+    17: <%= form_for @article, @article.comments.build do |form| %>
+    18:   <p>
+    19:     <%= form.label :commenter %><br>
+    20:     <%= form.text_field :commenter %>
+  app/views/articles/show.html.erb:17:in `_app_views_articles_show_html_erb__2354458349532249518_70022444654520'
+
+
+  Rendered /usr/share/rvm/gems/ruby-2.4.10@bukalapak/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.5ms)
+  Rendered /usr/share/rvm/gems/ruby-2.4.10@bukalapak/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.8ms)
+  Rendered /usr/share/rvm/gems/ruby-2.4.10@bukalapak/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /usr/share/rvm/gems/ruby-2.4.10@bukalapak/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (33.5ms)
+  Rendered /usr/share/rvm/gems/ruby-2.4.10@bukalapak/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /usr/share/rvm/gems/ruby-2.4.10@bukalapak/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /usr/share/rvm/gems/ruby-2.4.10@bukalapak/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /usr/share/rvm/gems/ruby-2.4.10@bukalapak/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/share/rvm/gems/ruby-2.4.10@bukalapak/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (31.8ms)
+  Rendered /usr/share/rvm/gems/ruby-2.4.10@bukalapak/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.7ms)
+  Rendered /usr/share/rvm/gems/ruby-2.4.10@bukalapak/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /usr/share/rvm/gems/ruby-2.4.10@bukalapak/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (63.0ms)
+
+
+Started GET "/articles/1" for 127.0.0.1 at 2021-07-05 11:51:09 +0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mArticle Load (0.4ms)[0m  SELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered articles/show.html.erb within layouts/application (2.0ms)
+Completed 500 Internal Server Error in 42ms (ActiveRecord: 0.9ms)
+
+SyntaxError (/home/karim/blwork/workspace/blog/app/views/articles/show.html.erb:17: syntax error, unexpected ',', expecting ')'
+m_for ([article, Comment.new],:remote => true) do |f| @outpu
+                              ^
+/home/karim/blwork/workspace/blog/app/views/articles/show.html.erb:29: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+                ^):
+  app/views/articles/show.html.erb:17: syntax error, unexpected ',', expecting ')'
+  app/views/articles/show.html.erb:29: syntax error, unexpected keyword_ensure, expecting end-of-input
+
+
+  Rendered /usr/share/rvm/gems/ruby-2.4.10@bukalapak/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.5ms)
+  Rendered /usr/share/rvm/gems/ruby-2.4.10@bukalapak/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.4ms)
+  Rendered /usr/share/rvm/gems/ruby-2.4.10@bukalapak/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /usr/share/rvm/gems/ruby-2.4.10@bukalapak/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (43.3ms)
+  Rendered /usr/share/rvm/gems/ruby-2.4.10@bukalapak/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /usr/share/rvm/gems/ruby-2.4.10@bukalapak/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /usr/share/rvm/gems/ruby-2.4.10@bukalapak/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /usr/share/rvm/gems/ruby-2.4.10@bukalapak/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /usr/share/rvm/gems/ruby-2.4.10@bukalapak/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (37.6ms)
+  Rendered /usr/share/rvm/gems/ruby-2.4.10@bukalapak/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /usr/share/rvm/gems/ruby-2.4.10@bukalapak/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /usr/share/rvm/gems/ruby-2.4.10@bukalapak/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (70.3ms)
+
+
+Started GET "/articles/1" for 127.0.0.1 at 2021-07-05 11:51:41 +0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mArticle Load (0.2ms)[0m  SELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered articles/show.html.erb within layouts/application (48.2ms)
+Completed 500 Internal Server Error in 91ms (ActiveRecord: 0.7ms)
+
+ActionView::Template::Error (undefined local variable or method `article' for #<#<Class:0x0000559f2aa42c88>:0x0000559f2aa39f70>
+Did you mean?  @article):
+    14: 
+    15: 
+    16: <h2>Add a comment:</h2>
+    17: <%= form_for [article, Comment.new],:remote => true do |f| %>  <p>
+    18:     <%= form.label :commenter %><br>
+    19:     <%= form.text_field :commenter %>
+    20:   </p>
+  app/views/articles/show.html.erb:17:in `_app_views_articles_show_html_erb__4571429491957170734_47071051558460'
+
+
+  Rendered /usr/share/rvm/gems/ruby-2.4.10@bukalapak/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (11.7ms)
+  Rendered /usr/share/rvm/gems/ruby-2.4.10@bukalapak/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.6ms)
+  Rendered /usr/share/rvm/gems/ruby-2.4.10@bukalapak/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /usr/share/rvm/gems/ruby-2.4.10@bukalapak/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (38.8ms)
+  Rendered /usr/share/rvm/gems/ruby-2.4.10@bukalapak/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /usr/share/rvm/gems/ruby-2.4.10@bukalapak/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /usr/share/rvm/gems/ruby-2.4.10@bukalapak/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /usr/share/rvm/gems/ruby-2.4.10@bukalapak/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.8ms)
+  Rendered /usr/share/rvm/gems/ruby-2.4.10@bukalapak/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (34.7ms)
+  Rendered /usr/share/rvm/gems/ruby-2.4.10@bukalapak/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /usr/share/rvm/gems/ruby-2.4.10@bukalapak/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /usr/share/rvm/gems/ruby-2.4.10@bukalapak/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (67.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2021-07-05 12:01:00 +0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.3ms)[0m  SELECT "articles".* FROM "articles"
+  Rendered articles/index.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 250ms (Views: 236.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/articles/1" for 127.0.0.1 at 2021-07-05 12:01:02 +0700
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (0.5ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered articles/show.html.erb within layouts/application (7.6ms)
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 0.5ms)
+
+ActionView::Template::Error (undefined method `comments' for nil:NilClass):
+    14: 
+    15: 
+    16: <h2>Add a comment:</h2>
+    17: <%= form_for [@post, @post.comments.build] do |form| %>  <p>
+    18:     <%= form.label :commenter %><br>
+    19:     <%= form.text_field :commenter %>
+    20:   </p>
+  app/views/articles/show.html.erb:17:in `_app_views_articles_show_html_erb___2310033499879615135_70340509213220'
+
+
+  Rendered /usr/share/rvm/gems/ruby-2.4.10@bukalapak/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.7ms)
+  Rendered /usr/share/rvm/gems/ruby-2.4.10@bukalapak/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /usr/share/rvm/gems/ruby-2.4.10@bukalapak/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /usr/share/rvm/gems/ruby-2.4.10@bukalapak/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (30.2ms)
+  Rendered /usr/share/rvm/gems/ruby-2.4.10@bukalapak/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered /usr/share/rvm/gems/ruby-2.4.10@bukalapak/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/share/rvm/gems/ruby-2.4.10@bukalapak/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /usr/share/rvm/gems/ruby-2.4.10@bukalapak/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /usr/share/rvm/gems/ruby-2.4.10@bukalapak/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (29.3ms)
+  Rendered /usr/share/rvm/gems/ruby-2.4.10@bukalapak/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /usr/share/rvm/gems/ruby-2.4.10@bukalapak/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /usr/share/rvm/gems/ruby-2.4.10@bukalapak/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (57.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2021-07-05 12:01:35 +0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.2ms)[0m  SELECT "articles".* FROM "articles"
+  Rendered articles/index.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 257ms (Views: 244.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/articles/1" for 127.0.0.1 at 2021-07-05 12:01:37 +0700
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (0.3ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered articles/show.html.erb within layouts/application (15.5ms)
+Completed 500 Internal Server Error in 34ms (ActiveRecord: 0.3ms)
+
+ActionView::Template::Error (undefined method `comments' for #<Article:0x00007f8066001110>
+Did you mean?  committed!):
+    14: 
+    15: 
+    16: <h2>Add a comment:</h2>
+    17: <%= form_for [@article, @article.comments.build] do |form| %>  <p>
+    18:     <%= form.label :commenter %><br>
+    19:     <%= form.text_field :commenter %>
+    20:   </p>
+  app/views/articles/show.html.erb:17:in `_app_views_articles_show_html_erb___2564470817187165206_70094717105980'
+
+
+  Rendered /usr/share/rvm/gems/ruby-2.4.10@bukalapak/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.0ms)
+  Rendered /usr/share/rvm/gems/ruby-2.4.10@bukalapak/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /usr/share/rvm/gems/ruby-2.4.10@bukalapak/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /usr/share/rvm/gems/ruby-2.4.10@bukalapak/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (22.1ms)
+  Rendered /usr/share/rvm/gems/ruby-2.4.10@bukalapak/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.2ms)
+  Rendered /usr/share/rvm/gems/ruby-2.4.10@bukalapak/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /usr/share/rvm/gems/ruby-2.4.10@bukalapak/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /usr/share/rvm/gems/ruby-2.4.10@bukalapak/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/share/rvm/gems/ruby-2.4.10@bukalapak/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (31.8ms)
+  Rendered /usr/share/rvm/gems/ruby-2.4.10@bukalapak/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /usr/share/rvm/gems/ruby-2.4.10@bukalapak/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /usr/share/rvm/gems/ruby-2.4.10@bukalapak/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (59.4ms)
+
+
+Started GET "/articles/1" for 127.0.0.1 at 2021-07-05 12:02:01 +0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mArticle Load (0.3ms)[0m  SELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered articles/show.html.erb within layouts/application (57.0ms)
+Completed 200 OK in 305ms (Views: 276.7ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/articles/1/comments" for 127.0.0.1 at 2021-07-05 12:02:18 +0700
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UvL7xmNRmTfJxlLdnHDjTqqTA10RyfzfBs+a7vqxB+AObyfVEk9L3keuYKm2G8Pcqah3xwDtck7osw3lB/ycZw==", "comment"=>{"commenter"=>"kokondao", "body"=>"hei post yang bagus!"}, "commit"=>"Create Comment", "article_id"=>"1"}
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.2ms)
+
+NoMethodError (undefined method `comment' for #<Article:0x00007f2b84f65e80>
+Did you mean?  comments
+               comments=):
+  app/controllers/comments_controller.rb:4:in `create'
+
+
+  Rendered /usr/share/rvm/gems/ruby-2.4.10@bukalapak/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.8ms)
+  Rendered /usr/share/rvm/gems/ruby-2.4.10@bukalapak/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /usr/share/rvm/gems/ruby-2.4.10@bukalapak/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /usr/share/rvm/gems/ruby-2.4.10@bukalapak/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (25.6ms)
+  Rendered /usr/share/rvm/gems/ruby-2.4.10@bukalapak/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /usr/share/rvm/gems/ruby-2.4.10@bukalapak/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /usr/share/rvm/gems/ruby-2.4.10@bukalapak/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/share/rvm/gems/ruby-2.4.10@bukalapak/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /usr/share/rvm/gems/ruby-2.4.10@bukalapak/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (25.3ms)
+  Rendered /usr/share/rvm/gems/ruby-2.4.10@bukalapak/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /usr/share/rvm/gems/ruby-2.4.10@bukalapak/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /usr/share/rvm/gems/ruby-2.4.10@bukalapak/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (55.8ms)
+
+
+Started POST "/articles/1/comments" for 127.0.0.1 at 2021-07-05 12:02:47 +0700
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UvL7xmNRmTfJxlLdnHDjTqqTA10RyfzfBs+a7vqxB+AObyfVEk9L3keuYKm2G8Pcqah3xwDtck7osw3lB/ycZw==", "comment"=>{"commenter"=>"kokondao", "body"=>"hei post yang bagus!"}, "commit"=>"Create Comment", "article_id"=>"1"}
+  [1m[35mArticle Load (0.3ms)[0m  SELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1  [["id", 1]]
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.3ms)
+
+NoMethodError (undefined method `comment' for #<Article:0x00007f2b86651090>
+Did you mean?  comments
+               comments=):
+  app/controllers/comments_controller.rb:4:in `create'
+
+
+  Rendered /usr/share/rvm/gems/ruby-2.4.10@bukalapak/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.8ms)
+  Rendered /usr/share/rvm/gems/ruby-2.4.10@bukalapak/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /usr/share/rvm/gems/ruby-2.4.10@bukalapak/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /usr/share/rvm/gems/ruby-2.4.10@bukalapak/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (25.7ms)
+  Rendered /usr/share/rvm/gems/ruby-2.4.10@bukalapak/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /usr/share/rvm/gems/ruby-2.4.10@bukalapak/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/share/rvm/gems/ruby-2.4.10@bukalapak/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/share/rvm/gems/ruby-2.4.10@bukalapak/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.7ms)
+  Rendered /usr/share/rvm/gems/ruby-2.4.10@bukalapak/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (24.2ms)
+  Rendered /usr/share/rvm/gems/ruby-2.4.10@bukalapak/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /usr/share/rvm/gems/ruby-2.4.10@bukalapak/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /usr/share/rvm/gems/ruby-2.4.10@bukalapak/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (49.6ms)
+
+
+Started POST "/articles/1/comments" for 127.0.0.1 at 2021-07-05 12:03:37 +0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UvL7xmNRmTfJxlLdnHDjTqqTA10RyfzfBs+a7vqxB+AObyfVEk9L3keuYKm2G8Pcqah3xwDtck7osw3lB/ycZw==", "comment"=>{"commenter"=>"kokondao", "body"=>"hei post yang bagus!"}, "commit"=>"Create Comment", "article_id"=>"1"}
+  [1m[35mArticle Load (0.2ms)[0m  SELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "comments" ("commenter", "body", "article_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["commenter", "kokondao"], ["body", "hei post yang bagus!"], ["article_id", 1], ["created_at", "2021-07-05 05:03:37.679495"], ["updated_at", "2021-07-05 05:03:37.679495"]]
+  [1m[36m (6.9ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/articles/1
+Completed 302 Found in 68ms (ActiveRecord: 8.5ms)
+
+
+Started GET "/articles/1" for 127.0.0.1 at 2021-07-05 12:03:37 +0700
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mArticle Load (0.2ms)[0m  SELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered articles/show.html.erb within layouts/application (20.1ms)
+Completed 200 OK in 259ms (Views: 256.7ms | ActiveRecord: 0.2ms)
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mArticle Load (0.3ms)[0m  SELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 1]]
+  [1m[35mArticle Load (0.3ms)[0m  SELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mComment Load (0.7ms)[0m  [1mSELECT  "comments".* FROM "comments" WHERE "comments"."article_id" = ? AND "comments"."id" = ? LIMIT 1[0m  [["article_id", 1], ["id", 1]]
