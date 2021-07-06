@@ -3291,3 +3291,125 @@ Processing by ArticlesController#index as HTML
   [1m[35mArticle Load (0.4ms)[0m  SELECT "articles".* FROM "articles"
   Rendered articles/index.html.erb within layouts/application (3.6ms)
 Completed 200 OK in 26ms (Views: 24.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2021-07-06 19:17:51 +0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ArticlesController#index as HTML
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "articles" WHERE "articles"."status" = ?  [["status", "public"]]
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 161ms (Views: 150.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2021-07-06 19:17:58 +0700
+Processing by ArticlesController#new as HTML
+Filter chain halted as #<Proc:0x000055b811e4db70@/usr/share/rvm/gems/ruby-2.4.10/gems/actionpack-4.2.11.3/lib/action_controller/metal/http_authentication.rb:70> rendered or redirected
+Completed 401 Unauthorized in 4ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2021-07-06 19:18:03 +0700
+Processing by ArticlesController#new as HTML
+Filter chain halted as #<Proc:0x000055b811e4db70@/usr/share/rvm/gems/ruby-2.4.10/gems/actionpack-4.2.11.3/lib/action_controller/metal/http_authentication.rb:70> rendered or redirected
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2021-07-06 19:18:10 +0700
+Processing by ArticlesController#new as HTML
+  Rendered articles/_form.html.erb (17.0ms)
+  Rendered articles/new.html.erb within layouts/application (20.6ms)
+Completed 200 OK in 38ms (Views: 36.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2021-07-06 19:18:24 +0700
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yK4neQEdeJx2whL6lX+/AHxIOfxXrDexhgkkL2JT3mqntlZsRW2h9Il1sGyStuhz5QOBWsJO34kolmkGI7E4bw==", "article"=>{"title"=>"no lo dudes mas", "body"=>"el futuro", "status"=>"public"}, "commit"=>"Create Article"}
+Filter chain halted as #<Proc:0x000055b811e4db70@/usr/share/rvm/gems/ruby-2.4.10/gems/actionpack-4.2.11.3/lib/action_controller/metal/http_authentication.rb:70> rendered or redirected
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2021-07-06 19:18:24 +0700
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yK4neQEdeJx2whL6lX+/AHxIOfxXrDexhgkkL2JT3mqntlZsRW2h9Il1sGyStuhz5QOBWsJO34kolmkGI7E4bw==", "article"=>{"title"=>"no lo dudes mas", "body"=>"el futuro", "status"=>"public"}, "commit"=>"Create Article"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  Rendered articles/_form.html.erb (2.7ms)
+  Rendered articles/new.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 32ms (Views: 28.5ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2021-07-06 19:18:38 +0700
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MeZeBcfndwXqrhZ8yZ+nxOxuHrSSZwhUW4pJK9y8vRpe/i8Qg5eubRUZtOrOVvC3dSWmEgeF4Gz1FQQCnV5bHw==", "article"=>{"title"=>"no lo dudes mas", "body"=>"no me ames, porque pienses", "status"=>"public"}, "commit"=>"Create Article"}
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "articles" ("title", "body", "status", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "no lo dudes mas"], ["body", "no me ames, porque pienses"], ["status", "public"], ["created_at", "2021-07-06 12:18:38.777155"], ["updated_at", "2021-07-06 12:18:38.777155"]]
+  [1m[35m (6.6ms)[0m  commit transaction
+Redirected to http://localhost:3000/articles/7
+Completed 302 Found in 17ms (ActiveRecord: 7.6ms)
+
+
+Started GET "/articles/7" for 127.0.0.1 at 2021-07-06 19:18:38 +0700
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?  [["article_id", 7]]
+  Rendered collection (0.0ms)
+  Rendered comments/_form.html.erb (9.5ms)
+  Rendered articles/show.html.erb within layouts/application (26.2ms)
+Completed 200 OK in 42ms (Views: 39.0ms | ActiveRecord: 0.6ms)
+
+
+Started DELETE "/articles/7" for 127.0.0.1 at 2021-07-06 19:18:49 +0700
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"eVgROKO8eSUCYGvkGh1LAXSWniPO+U/ZGV3/CJjzNQ0WQGAt58ygTf3XyXId1Bxy7d0mhVsbp+G3wrIh2RHTCA==", "id"=>"7"}
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 7]]
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "articles" WHERE "articles"."id" = ?  [["id", 7]]
+  [1m[36m (6.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 11ms (ActiveRecord: 6.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2021-07-06 19:18:49 +0700
+Processing by ArticlesController#index as HTML
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "articles" WHERE "articles"."status" = ?  [["status", "public"]]
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 18ms (Views: 17.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2021-07-06 19:19:15 +0700
+Processing by ArticlesController#new as HTML
+  Rendered articles/_form.html.erb (1.8ms)
+  Rendered articles/new.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 30ms (Views: 23.5ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2021-07-06 19:19:26 +0700
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RTGU1OY07q+3nfNw2/BJpc0v+DRVk0g1NNk1H0MjIjsqKeXBokQ3x0gqUebcOR7WVGRAksBxoA2aRng2AsHEPg==", "article"=>{"title"=>"no me ames", "body"=>"dentro de una", "status"=>"public"}, "commit"=>"Create Article"}
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "articles" ("title", "body", "status", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "no me ames"], ["body", "dentro de una"], ["status", "public"], ["created_at", "2021-07-06 12:19:26.442061"], ["updated_at", "2021-07-06 12:19:26.442061"]]
+  [1m[35m (3.9ms)[0m  commit transaction
+Redirected to http://localhost:3000/articles/8
+Completed 302 Found in 13ms (ActiveRecord: 4.5ms)
+
+
+Started GET "/articles/8" for 127.0.0.1 at 2021-07-06 19:19:26 +0700
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mArticle Load (0.3ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 8]]
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?  [["article_id", 8]]
+  Rendered collection (0.0ms)
+  Rendered comments/_form.html.erb (10.0ms)
+  Rendered articles/show.html.erb within layouts/application (17.4ms)
+Completed 200 OK in 36ms (Views: 32.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2021-07-06 19:19:31 +0700
+Processing by ArticlesController#index as HTML
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "articles" WHERE "articles"."status" = ?[0m  [["status", "public"]]
+  [1m[35mArticle Load (0.3ms)[0m  SELECT "articles".* FROM "articles"
+  Rendered articles/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 26ms (Views: 24.0ms | ActiveRecord: 0.6ms)

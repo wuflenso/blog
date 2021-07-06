@@ -10,6 +10,11 @@
 # the --skip-routes prevents the routes to be created as well because we already created them before.
 
 class ArticlesController < ApplicationController
+
+  # basic authentication brought to u by rails
+  http_basic_authenticate_with name: "karim", password: "123",
+  except: [:index,:show]
+
   def index
     @articles = Article.all
   end
