@@ -6,8 +6,12 @@
 <!-- The <%  %> is somewhat like razor in asp.net. It adds a ruby functionality inside an html file -->
 <!-- The <%=  %> is the same but we want the code result to show -->
 
+<!--this is how we call a class extension method from Visible Concern-->
+Our blog has <%= Article.public_count %> articles and counting!
+
 <ul>
     <% @articles.each do |article| %>
+    <% unless article.archived? %>
         <li>
             <h5>
                 <!-- Normally it is written like this: -->
@@ -19,6 +23,7 @@
             </h5>
             </a>
         </li>
+        <%end%>
         <% end %>
 </ul>
 

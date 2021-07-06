@@ -12,7 +12,10 @@
 # rake db:migrate
 
 class Article < ActiveRecord::Base
-    has_many :comments
+    
+    # we can include the visible concern here, and in comments
+    include Visible
+    has_many :comments, dependent: :destroy
 
     validates :title, presence: true
     validates :body, presence: true, length: {minimum: 10}
