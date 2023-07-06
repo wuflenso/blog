@@ -26,6 +26,10 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # haml
 gem 'haml-rails'
 
+gem 'dotenv-rails'
+
+gem 'dalli', '2.7.11'
+
 # webpack
 gem 'webpacker', '~> 3.0.2'
 

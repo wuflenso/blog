@@ -1,3 +1,6 @@
 # build results
 tmp
 node_modules
+
+# files
+.env

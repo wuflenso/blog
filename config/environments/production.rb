@@ -55,7 +55,12 @@ Rails.application.configure do
   # config.logger = ActiveSupport::TaggedLogging.new(SyslogLogger.new)
 
   # Use a different cache store in production.
-  # config.cache_store = :mem_cache_store
+  socket_timeout = ENV['DALLI_TIMEOUT']&.to_f || 0.5
+  dalli_socket_failure_delay = ENV['DALLI_SOCKET_FAILURE_DELAY']&.to_f || 0.2
+  dalli_pool_size = (ENV['DALLI_POOL_SIZE'] || ENV['RAILS_MAX_THREADS'] || 5).to_i
+  down_retry_delay = ENV['DALLI_DOWN_RETRY_DELAY']&.to_i || 60
+  dalli_max_failures = ENV['DALLI_MAX_FAILURES']&.to_i || 3
+  config.cache_store = :dalli_store, *(ENV['MEMCACHED_HOSTS'] || "").split(","), { namespace: "gundala", compress: true, socket_timeout: socket_timeout, socket_max_failures: dalli_max_failures, socket_failure_delay: dalli_socket_failure_delay, down_retry_delay: down_retry_delay }
 
   # Enable serving of images, stylesheets, and JavaScripts from an asset server.
   # config.action_controller.asset_host = 'http://assets.example.com'
