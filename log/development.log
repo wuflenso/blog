@@ -3413,3 +3413,1859 @@ Processing by ArticlesController#index as HTML
   [1m[35mArticle Load (0.3ms)[0m  SELECT "articles".* FROM "articles"
   Rendered articles/index.html.erb within layouts/application (4.3ms)
 Completed 200 OK in 26ms (Views: 24.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2023-05-17 20:17:33 +0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ArticlesController#index as HTML
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "articles" WHERE "articles"."status" = ?  [["status", "public"]]
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 246ms (Views: 237.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2023-05-17 20:17:33 +0700
+
+
+Started GET "/assets/turbolinks.self-569ee74eaa15c1e2019317ff770b8769b1ec033a0f572a485f64c82ddc8f989e.js?body=1" for ::1 at 2023-05-17 20:17:33 +0700
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2023-05-17 20:17:33 +0700
+
+
+Started GET "/" for ::1 at 2023-05-17 20:20:19 +0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ArticlesController#index as HTML
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+/Users/karimhartono/.rvm/gems/ruby-2.6.8/gems/webpacker-3.0.2/lib/webpacker/webpack_runner.rb:11:in `exec': No such file or directory - /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/.bin/webpack (Errno::ENOENT)
+	from /Users/karimhartono/.rvm/gems/ruby-2.6.8/gems/webpacker-3.0.2/lib/webpacker/webpack_runner.rb:11:in `block in run'
+	from /Users/karimhartono/.rvm/gems/ruby-2.6.8/gems/webpacker-3.0.2/lib/webpacker/webpack_runner.rb:10:in `chdir'
+	from /Users/karimhartono/.rvm/gems/ruby-2.6.8/gems/webpacker-3.0.2/lib/webpacker/webpack_runner.rb:10:in `run'
+	from /Users/karimhartono/.rvm/gems/ruby-2.6.8/gems/webpacker-3.0.2/lib/webpacker/runner.rb:6:in `run'
+	from /Users/karimhartono/.rvm/gems/ruby-2.6.8/gems/webpacker-3.0.2/exe/webpack:8:in `<top (required)>'
+	from ./bin/webpack:29:in `load'
+	from ./bin/webpack:29:in `<main>'
+
+  Rendered articles/index.html.haml within layouts/application (176.9ms)
+Completed 500 Internal Server Error in 189ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (Webpacker can't find application.js in /Users/karimhartono/blwork/workspace/learn-haml/blog/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. Webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your Webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+    1: %strong= "waduhh"
+    2: 
+    3: = javascript_pack_tag 'application.js'
+  app/views/articles/index.html.haml:3:in `_app_views_articles_index_html_haml___2468450166009604203_70347589356540'
+
+
+  Rendered /Users/karimhartono/.rvm/gems/ruby-2.6.8/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.5ms)
+  Rendered /Users/karimhartono/.rvm/gems/ruby-2.6.8/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /Users/karimhartono/.rvm/gems/ruby-2.6.8/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /Users/karimhartono/.rvm/gems/ruby-2.6.8/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (16.5ms)
+  Rendered /Users/karimhartono/.rvm/gems/ruby-2.6.8/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /Users/karimhartono/.rvm/gems/ruby-2.6.8/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/karimhartono/.rvm/gems/ruby-2.6.8/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/karimhartono/.rvm/gems/ruby-2.6.8/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.1ms)
+  Rendered /Users/karimhartono/.rvm/gems/ruby-2.6.8/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (14.9ms)
+  Rendered /Users/karimhartono/.rvm/gems/ruby-2.6.8/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.1ms)
+  Rendered /Users/karimhartono/.rvm/gems/ruby-2.6.8/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/karimhartono/.rvm/gems/ruby-2.6.8/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (28.3ms)
+
+
+Started GET "/" for ::1 at 2023-05-17 20:20:38 +0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ArticlesController#index as HTML
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+/Users/karimhartono/.rvm/gems/ruby-2.6.8/gems/webpacker-3.0.2/lib/webpacker/webpack_runner.rb:11:in `exec': No such file or directory - /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/.bin/webpack (Errno::ENOENT)
+	from /Users/karimhartono/.rvm/gems/ruby-2.6.8/gems/webpacker-3.0.2/lib/webpacker/webpack_runner.rb:11:in `block in run'
+	from /Users/karimhartono/.rvm/gems/ruby-2.6.8/gems/webpacker-3.0.2/lib/webpacker/webpack_runner.rb:10:in `chdir'
+	from /Users/karimhartono/.rvm/gems/ruby-2.6.8/gems/webpacker-3.0.2/lib/webpacker/webpack_runner.rb:10:in `run'
+	from /Users/karimhartono/.rvm/gems/ruby-2.6.8/gems/webpacker-3.0.2/lib/webpacker/runner.rb:6:in `run'
+	from /Users/karimhartono/.rvm/gems/ruby-2.6.8/gems/webpacker-3.0.2/exe/webpack:8:in `<top (required)>'
+	from ./bin/webpack:29:in `load'
+	from ./bin/webpack:29:in `<main>'
+
+  Rendered articles/index.html.haml within layouts/application (174.3ms)
+Completed 500 Internal Server Error in 185ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (Webpacker can't find application.js in /Users/karimhartono/blwork/workspace/learn-haml/blog/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. Webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your Webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+    1: %strong= "waduhh"
+    2: 
+    3: = javascript_pack_tag 'application'
+  app/views/articles/index.html.haml:3:in `_app_views_articles_index_html_haml___913211396645671222_70121746132020'
+
+
+  Rendered /Users/karimhartono/.rvm/gems/ruby-2.6.8/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.3ms)
+  Rendered /Users/karimhartono/.rvm/gems/ruby-2.6.8/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /Users/karimhartono/.rvm/gems/ruby-2.6.8/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.4ms)
+  Rendered /Users/karimhartono/.rvm/gems/ruby-2.6.8/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (11.0ms)
+  Rendered /Users/karimhartono/.rvm/gems/ruby-2.6.8/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.1ms)
+  Rendered /Users/karimhartono/.rvm/gems/ruby-2.6.8/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/karimhartono/.rvm/gems/ruby-2.6.8/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.1ms)
+  Rendered /Users/karimhartono/.rvm/gems/ruby-2.6.8/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.1ms)
+  Rendered /Users/karimhartono/.rvm/gems/ruby-2.6.8/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (10.0ms)
+  Rendered /Users/karimhartono/.rvm/gems/ruby-2.6.8/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.1ms)
+  Rendered /Users/karimhartono/.rvm/gems/ruby-2.6.8/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.1ms)
+  Rendered /Users/karimhartono/.rvm/gems/ruby-2.6.8/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (18.5ms)
+
+
+Started GET "/" for ::1 at 2023-05-17 20:24:20 +0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ArticlesController#index as HTML
+  Rendered articles/index.html.haml within layouts/application (2.2ms)
+Completed 200 OK in 134ms (Views: 126.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2023-05-17 20:25:05 +0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ArticlesController#index as HTML
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+/Users/karimhartono/.rvm/gems/ruby-2.6.8/gems/webpacker-3.0.2/lib/webpacker/webpack_runner.rb:11:in `exec': No such file or directory - /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/.bin/webpack (Errno::ENOENT)
+	from /Users/karimhartono/.rvm/gems/ruby-2.6.8/gems/webpacker-3.0.2/lib/webpacker/webpack_runner.rb:11:in `block in run'
+	from /Users/karimhartono/.rvm/gems/ruby-2.6.8/gems/webpacker-3.0.2/lib/webpacker/webpack_runner.rb:10:in `chdir'
+	from /Users/karimhartono/.rvm/gems/ruby-2.6.8/gems/webpacker-3.0.2/lib/webpacker/webpack_runner.rb:10:in `run'
+	from /Users/karimhartono/.rvm/gems/ruby-2.6.8/gems/webpacker-3.0.2/lib/webpacker/runner.rb:6:in `run'
+	from /Users/karimhartono/.rvm/gems/ruby-2.6.8/gems/webpacker-3.0.2/exe/webpack:8:in `<top (required)>'
+	from ./bin/webpack:29:in `load'
+	from ./bin/webpack:29:in `<main>'
+
+  Rendered articles/index.html.haml within layouts/application (175.0ms)
+Completed 500 Internal Server Error in 187ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (Webpacker can't find application.js in /Users/karimhartono/blwork/workspace/learn-haml/blog/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. Webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your Webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+    1: %strong="waduhh"
+    2: 
+    3: = javascript_pack_tag 'application', data: { turbolinks_track: 'reload'}
+  app/views/articles/index.html.haml:3:in `_app_views_articles_index_html_haml__1617974775583991745_70100930079000'
+
+
+  Rendered /Users/karimhartono/.rvm/gems/ruby-2.6.8/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.5ms)
+  Rendered /Users/karimhartono/.rvm/gems/ruby-2.6.8/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /Users/karimhartono/.rvm/gems/ruby-2.6.8/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.4ms)
+  Rendered /Users/karimhartono/.rvm/gems/ruby-2.6.8/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (15.4ms)
+  Rendered /Users/karimhartono/.rvm/gems/ruby-2.6.8/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /Users/karimhartono/.rvm/gems/ruby-2.6.8/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.1ms)
+  Rendered /Users/karimhartono/.rvm/gems/ruby-2.6.8/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.1ms)
+  Rendered /Users/karimhartono/.rvm/gems/ruby-2.6.8/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.1ms)
+  Rendered /Users/karimhartono/.rvm/gems/ruby-2.6.8/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (13.9ms)
+  Rendered /Users/karimhartono/.rvm/gems/ruby-2.6.8/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/karimhartono/.rvm/gems/ruby-2.6.8/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/karimhartono/.rvm/gems/ruby-2.6.8/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (28.4ms)
+
+
+Started GET "/" for ::1 at 2023-05-17 20:26:12 +0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ArticlesController#index as HTML
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+/Users/karimhartono/.rvm/gems/ruby-2.6.8/gems/webpacker-3.0.2/lib/webpacker/webpack_runner.rb:11:in `exec': No such file or directory - /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/.bin/webpack (Errno::ENOENT)
+	from /Users/karimhartono/.rvm/gems/ruby-2.6.8/gems/webpacker-3.0.2/lib/webpacker/webpack_runner.rb:11:in `block in run'
+	from /Users/karimhartono/.rvm/gems/ruby-2.6.8/gems/webpacker-3.0.2/lib/webpacker/webpack_runner.rb:10:in `chdir'
+	from /Users/karimhartono/.rvm/gems/ruby-2.6.8/gems/webpacker-3.0.2/lib/webpacker/webpack_runner.rb:10:in `run'
+	from /Users/karimhartono/.rvm/gems/ruby-2.6.8/gems/webpacker-3.0.2/lib/webpacker/runner.rb:6:in `run'
+	from /Users/karimhartono/.rvm/gems/ruby-2.6.8/gems/webpacker-3.0.2/exe/webpack:8:in `<top (required)>'
+	from ./bin/webpack:29:in `load'
+	from ./bin/webpack:29:in `<main>'
+
+  Rendered articles/index.html.haml within layouts/application (173.9ms)
+Completed 500 Internal Server Error in 184ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (Webpacker can't find application.js in /Users/karimhartono/blwork/workspace/learn-haml/blog/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. Webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your Webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+    1: %strong="waduhh"
+    2: 
+    3: = javascript_pack_tag 'application', data: { turbolinks_track: 'reload'}
+  app/views/articles/index.html.haml:3:in `_app_views_articles_index_html_haml___1973191438219530004_70227871737160'
+
+
+  Rendered /Users/karimhartono/.rvm/gems/ruby-2.6.8/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.4ms)
+  Rendered /Users/karimhartono/.rvm/gems/ruby-2.6.8/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /Users/karimhartono/.rvm/gems/ruby-2.6.8/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.4ms)
+  Rendered /Users/karimhartono/.rvm/gems/ruby-2.6.8/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (11.1ms)
+  Rendered /Users/karimhartono/.rvm/gems/ruby-2.6.8/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.1ms)
+  Rendered /Users/karimhartono/.rvm/gems/ruby-2.6.8/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.1ms)
+  Rendered /Users/karimhartono/.rvm/gems/ruby-2.6.8/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/karimhartono/.rvm/gems/ruby-2.6.8/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.1ms)
+  Rendered /Users/karimhartono/.rvm/gems/ruby-2.6.8/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (10.2ms)
+  Rendered /Users/karimhartono/.rvm/gems/ruby-2.6.8/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.1ms)
+  Rendered /Users/karimhartono/.rvm/gems/ruby-2.6.8/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.1ms)
+  Rendered /Users/karimhartono/.rvm/gems/ruby-2.6.8/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (18.6ms)
+
+
+Started GET "/" for ::1 at 2023-05-17 20:27:12 +0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ArticlesController#index as HTML
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+/Users/karimhartono/.rvm/gems/ruby-2.6.8/gems/webpacker-3.0.2/lib/webpacker/webpack_runner.rb:11:in `exec': No such file or directory - /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/.bin/webpack (Errno::ENOENT)
+	from /Users/karimhartono/.rvm/gems/ruby-2.6.8/gems/webpacker-3.0.2/lib/webpacker/webpack_runner.rb:11:in `block in run'
+	from /Users/karimhartono/.rvm/gems/ruby-2.6.8/gems/webpacker-3.0.2/lib/webpacker/webpack_runner.rb:10:in `chdir'
+	from /Users/karimhartono/.rvm/gems/ruby-2.6.8/gems/webpacker-3.0.2/lib/webpacker/webpack_runner.rb:10:in `run'
+	from /Users/karimhartono/.rvm/gems/ruby-2.6.8/gems/webpacker-3.0.2/lib/webpacker/runner.rb:6:in `run'
+	from /Users/karimhartono/.rvm/gems/ruby-2.6.8/gems/webpacker-3.0.2/exe/webpack:8:in `<top (required)>'
+	from ./bin/webpack:29:in `load'
+	from ./bin/webpack:29:in `<main>'
+
+  Rendered articles/index.html.haml within layouts/application (176.9ms)
+Completed 500 Internal Server Error in 187ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (Webpacker can't find application.js in /Users/karimhartono/blwork/workspace/learn-haml/blog/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. Webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your Webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+    1: %strong="waduhh"
+    2: 
+    3: = javascript_pack_tag 'application', data: { turbolinks_track: 'reload'}
+  app/views/articles/index.html.haml:3:in `_app_views_articles_index_html_haml__4051747255874067558_70311975276300'
+
+
+  Rendered /Users/karimhartono/.rvm/gems/ruby-2.6.8/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.4ms)
+  Rendered /Users/karimhartono/.rvm/gems/ruby-2.6.8/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /Users/karimhartono/.rvm/gems/ruby-2.6.8/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /Users/karimhartono/.rvm/gems/ruby-2.6.8/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (12.0ms)
+  Rendered /Users/karimhartono/.rvm/gems/ruby-2.6.8/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/karimhartono/.rvm/gems/ruby-2.6.8/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.1ms)
+  Rendered /Users/karimhartono/.rvm/gems/ruby-2.6.8/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.1ms)
+  Rendered /Users/karimhartono/.rvm/gems/ruby-2.6.8/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.1ms)
+  Rendered /Users/karimhartono/.rvm/gems/ruby-2.6.8/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (9.8ms)
+  Rendered /Users/karimhartono/.rvm/gems/ruby-2.6.8/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.1ms)
+  Rendered /Users/karimhartono/.rvm/gems/ruby-2.6.8/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/karimhartono/.rvm/gems/ruby-2.6.8/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (19.8ms)
+
+
+Started GET "/" for ::1 at 2023-05-17 20:29:58 +0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ArticlesController#index as HTML
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+/Users/karimhartono/.rvm/gems/ruby-2.6.8/gems/webpacker-3.0.2/lib/webpacker/webpack_runner.rb:11:in `exec': No such file or directory - /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/.bin/webpack (Errno::ENOENT)
+	from /Users/karimhartono/.rvm/gems/ruby-2.6.8/gems/webpacker-3.0.2/lib/webpacker/webpack_runner.rb:11:in `block in run'
+	from /Users/karimhartono/.rvm/gems/ruby-2.6.8/gems/webpacker-3.0.2/lib/webpacker/webpack_runner.rb:10:in `chdir'
+	from /Users/karimhartono/.rvm/gems/ruby-2.6.8/gems/webpacker-3.0.2/lib/webpacker/webpack_runner.rb:10:in `run'
+	from /Users/karimhartono/.rvm/gems/ruby-2.6.8/gems/webpacker-3.0.2/lib/webpacker/runner.rb:6:in `run'
+	from /Users/karimhartono/.rvm/gems/ruby-2.6.8/gems/webpacker-3.0.2/exe/webpack:8:in `<top (required)>'
+	from ./bin/webpack:29:in `load'
+	from ./bin/webpack:29:in `<main>'
+
+  Rendered articles/index.html.haml within layouts/application (175.0ms)
+Completed 500 Internal Server Error in 186ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (Webpacker can't find application.js in /Users/karimhartono/blwork/workspace/learn-haml/blog/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. Webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your Webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+    1: %strong="waduhh"
+    2: 
+    3: = javascript_pack_tag 'application', data: { turbolinks_track: 'reload'}
+  app/views/articles/index.html.haml:3:in `_app_views_articles_index_html_haml___3903312848228349652_70261277528820'
+
+
+  Rendered /Users/karimhartono/.rvm/gems/ruby-2.6.8/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.5ms)
+  Rendered /Users/karimhartono/.rvm/gems/ruby-2.6.8/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /Users/karimhartono/.rvm/gems/ruby-2.6.8/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.5ms)
+  Rendered /Users/karimhartono/.rvm/gems/ruby-2.6.8/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (11.9ms)
+  Rendered /Users/karimhartono/.rvm/gems/ruby-2.6.8/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /Users/karimhartono/.rvm/gems/ruby-2.6.8/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.1ms)
+  Rendered /Users/karimhartono/.rvm/gems/ruby-2.6.8/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.1ms)
+  Rendered /Users/karimhartono/.rvm/gems/ruby-2.6.8/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/karimhartono/.rvm/gems/ruby-2.6.8/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (10.7ms)
+  Rendered /Users/karimhartono/.rvm/gems/ruby-2.6.8/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.1ms)
+  Rendered /Users/karimhartono/.rvm/gems/ruby-2.6.8/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/karimhartono/.rvm/gems/ruby-2.6.8/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (19.4ms)
+
+
+Started GET "/" for ::1 at 2023-05-17 20:30:00 +0700
+Processing by ArticlesController#index as HTML
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+/Users/karimhartono/.rvm/gems/ruby-2.6.8/gems/webpacker-3.0.2/lib/webpacker/webpack_runner.rb:11:in `exec': No such file or directory - /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/.bin/webpack (Errno::ENOENT)
+	from /Users/karimhartono/.rvm/gems/ruby-2.6.8/gems/webpacker-3.0.2/lib/webpacker/webpack_runner.rb:11:in `block in run'
+	from /Users/karimhartono/.rvm/gems/ruby-2.6.8/gems/webpacker-3.0.2/lib/webpacker/webpack_runner.rb:10:in `chdir'
+	from /Users/karimhartono/.rvm/gems/ruby-2.6.8/gems/webpacker-3.0.2/lib/webpacker/webpack_runner.rb:10:in `run'
+	from /Users/karimhartono/.rvm/gems/ruby-2.6.8/gems/webpacker-3.0.2/lib/webpacker/runner.rb:6:in `run'
+	from /Users/karimhartono/.rvm/gems/ruby-2.6.8/gems/webpacker-3.0.2/exe/webpack:8:in `<top (required)>'
+	from ./bin/webpack:29:in `load'
+	from ./bin/webpack:29:in `<main>'
+
+  Rendered articles/index.html.haml within layouts/application (216.3ms)
+Completed 500 Internal Server Error in 220ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (Webpacker can't find application.js in /Users/karimhartono/blwork/workspace/learn-haml/blog/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. Webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your Webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+    1: %strong="waduhh"
+    2: 
+    3: = javascript_pack_tag 'application', data: { turbolinks_track: 'reload'}
+  app/views/articles/index.html.haml:3:in `_app_views_articles_index_html_haml___3903312848228349652_70261277528820'
+
+
+  Rendered /Users/karimhartono/.rvm/gems/ruby-2.6.8/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.4ms)
+  Rendered /Users/karimhartono/.rvm/gems/ruby-2.6.8/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /Users/karimhartono/.rvm/gems/ruby-2.6.8/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.4ms)
+  Rendered /Users/karimhartono/.rvm/gems/ruby-2.6.8/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (12.1ms)
+  Rendered /Users/karimhartono/.rvm/gems/ruby-2.6.8/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.1ms)
+  Rendered /Users/karimhartono/.rvm/gems/ruby-2.6.8/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/karimhartono/.rvm/gems/ruby-2.6.8/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.1ms)
+  Rendered /Users/karimhartono/.rvm/gems/ruby-2.6.8/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.1ms)
+  Rendered /Users/karimhartono/.rvm/gems/ruby-2.6.8/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (8.3ms)
+  Rendered /Users/karimhartono/.rvm/gems/ruby-2.6.8/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.1ms)
+  Rendered /Users/karimhartono/.rvm/gems/ruby-2.6.8/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.1ms)
+  Rendered /Users/karimhartono/.rvm/gems/ruby-2.6.8/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (15.4ms)
+
+
+Started GET "/" for ::1 at 2023-05-17 20:32:41 +0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ArticlesController#index as HTML
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+Hash: 3a0e19493bf166e16dcf
+Version: webpack 4.46.0
+Time: 223ms
+Built at: 05/17/2023 8:32:42 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-385e71becb2a54b8e40c.js   9.63 KiB  application  [emitted] [immutable]  application
+js/application-385e71becb2a54b8e40c.js.map   3.53 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-385e71becb2a54b8e40c.js js/application-385e71becb2a54b8e40c.js.map
+[./app/javascript/packs/application.js] 5.73 KiB {application} [built] [failed] [1 error]
+
+ERROR in ./app/javascript/packs/application.js
+Module build failed (from ./node_modules/babel-loader/lib/index.js):
+Error: Cannot find package 'babel-plugin-syntax-dynamic-import' imported from /Users/karimhartono/blwork/workspace/learn-haml/blog/babel-virtual-resolve-base.js
+    at __node_internal_ (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/vendor/import-meta-resolve.js:233:9)
+    at new NodeError (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/vendor/import-meta-resolve.js:203:5)
+    at packageResolve (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/vendor/import-meta-resolve.js:872:9)
+    at moduleResolve (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/vendor/import-meta-resolve.js:901:20)
+    at defaultResolve (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/vendor/import-meta-resolve.js:984:15)
+    at resolve (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/vendor/import-meta-resolve.js:998:12)
+    at resolve (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/files/import-meta-resolve.js:13:10)
+    at tryImportMetaResolve (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/files/plugins.js:123:45)
+    at resolveStandardizedNameForImport (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/files/plugins.js:145:19)
+    at resolveStandardizedName (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/files/plugins.js:154:12)
+    at loadPlugin (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/files/plugins.js:47:20)
+    at loadPlugin.next (<anonymous>)
+    at createDescriptor (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/config-descriptors.js:139:16)
+    at createDescriptor.next (<anonymous>)
+    at step (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:261:32)
+    at evaluateAsync (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:291:5)
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:44:11
+    at Array.forEach (<anonymous>)
+    at Function.async (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:43:15)
+    at Function.all (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:216:13)
+    at Generator.next (<anonymous>)
+    at createDescriptors (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/config-descriptors.js:101:41)
+    at createDescriptors.next (<anonymous>)
+    at createPluginDescriptors (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/config-descriptors.js:98:17)
+    at createPluginDescriptors.next (<anonymous>)
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/gensync-utils/functional.js:21:23
+    at Generator.next (<anonymous>)
+    at mergeChainOpts (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/config-chain.js:349:34)
+    at mergeChainOpts.next (<anonymous>)
+    at chainWalker (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/config-chain.js:316:14)
+    at chainWalker.next (<anonymous>)
+    at loadFileChain (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/config-chain.js:192:24)
+    at loadFileChain.next (<anonymous>)
+    at buildRootChain (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/config-chain.js:109:31)
+    at buildRootChain.next (<anonymous>)
+    at loadPrivatePartialConfig (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/partial.js:79:62)
+    at loadPrivatePartialConfig.next (<anonymous>)
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/partial.js:122:25
+    at Generator.next (<anonymous>)
+    at step (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:269:25)
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:273:13
+    at async.call.result.err.err (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:223:11)
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:50:45
+    at step (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:287:14)
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:273:13
+    at async.call.result.err.err (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:223:11)
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:189:28
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/gensync-utils/async.js:68:7
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:113:33
+    at step (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:287:14)
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:273:13
+    at async.call.result.err.err (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:223:11)
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:189:28
+    at FSReqCallback.readFileAfterClose [as oncomplete] (internal/fs/read_file_context.js:63:3)
+
+(node:2820) UnhandledPromiseRejectionWarning: Error: Cannot find package 'babel-plugin-syntax-dynamic-import' imported from /Users/karimhartono/blwork/workspace/learn-haml/blog/babel-virtual-resolve-base.js
+    at __node_internal_ (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/vendor/import-meta-resolve.js:233:9)
+    at new NodeError (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/vendor/import-meta-resolve.js:203:5)
+    at packageResolve (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/vendor/import-meta-resolve.js:872:9)
+    at moduleResolve (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/vendor/import-meta-resolve.js:901:20)
+    at defaultResolve (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/vendor/import-meta-resolve.js:984:15)
+    at resolve (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/vendor/import-meta-resolve.js:998:12)
+    at resolve (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/files/import-meta-resolve.js:13:10)
+    at tryImportMetaResolve (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/files/plugins.js:123:45)
+    at resolveStandardizedNameForImport (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/files/plugins.js:145:19)
+    at resolveStandardizedName (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/files/plugins.js:154:12)
+    at loadPlugin (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/files/plugins.js:47:20)
+    at loadPlugin.next (<anonymous>)
+    at createDescriptor (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/config-descriptors.js:139:16)
+    at createDescriptor.next (<anonymous>)
+    at step (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:261:32)
+    at evaluateAsync (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:291:5)
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:44:11
+    at Array.forEach (<anonymous>)
+    at Function.async (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:43:15)
+    at Function.all (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:216:13)
+    at Generator.next (<anonymous>)
+    at createDescriptors (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/config-descriptors.js:101:41)
+    at createDescriptors.next (<anonymous>)
+    at createPluginDescriptors (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/config-descriptors.js:98:17)
+    at createPluginDescriptors.next (<anonymous>)
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/gensync-utils/functional.js:21:23
+    at Generator.next (<anonymous>)
+    at mergeChainOpts (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/config-chain.js:349:34)
+    at mergeChainOpts.next (<anonymous>)
+    at chainWalker (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/config-chain.js:316:14)
+    at chainWalker.next (<anonymous>)
+    at loadFileChain (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/config-chain.js:192:24)
+    at loadFileChain.next (<anonymous>)
+    at buildRootChain (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/config-chain.js:109:31)
+    at buildRootChain.next (<anonymous>)
+    at loadPrivatePartialConfig (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/partial.js:79:62)
+    at loadPrivatePartialConfig.next (<anonymous>)
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/partial.js:122:25
+    at Generator.next (<anonymous>)
+    at step (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:269:25)
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:273:13
+    at async.call.result.err.err (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:223:11)
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:50:45
+    at step (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:287:14)
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:273:13
+    at async.call.result.err.err (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:223:11)
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:189:28
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/gensync-utils/async.js:68:7
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:113:33
+    at step (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:287:14)
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:273:13
+    at async.call.result.err.err (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:223:11)
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:189:28
+    at FSReqCallback.readFileAfterClose [as oncomplete] (internal/fs/read_file_context.js:63:3)
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:2820) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 1)
+(node:2820) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+
+  Rendered articles/index.html.haml within layouts/application (1055.5ms)
+Completed 200 OK in 1198ms (Views: 1190.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2023-05-17 20:33:06 +0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ArticlesController#index as HTML
+  Rendered articles/index.html.haml within layouts/application (4.7ms)
+Completed 200 OK in 130ms (Views: 123.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2023-05-17 21:24:39 +0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ArticlesController#index as HTML
+  Rendered articles/index.html.haml within layouts/application (4.1ms)
+Completed 200 OK in 134ms (Views: 127.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2023-05-17 21:28:18 +0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ArticlesController#index as HTML
+  Rendered articles/index.html.haml within layouts/application (4.2ms)
+Completed 200 OK in 133ms (Views: 126.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2023-05-17 21:30:15 +0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ArticlesController#index as HTML
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+Hash: 3a0e19493bf166e16dcf
+Version: webpack 4.46.0
+Time: 194ms
+Built at: 05/17/2023 9:30:16 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-385e71becb2a54b8e40c.js   9.63 KiB  application  [emitted] [immutable]  application
+js/application-385e71becb2a54b8e40c.js.map   3.53 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-385e71becb2a54b8e40c.js js/application-385e71becb2a54b8e40c.js.map
+[./app/javascript/packs/application.js] 5.73 KiB {application} [built] [failed] [1 error]
+
+ERROR in ./app/javascript/packs/application.js
+Module build failed (from ./node_modules/babel-loader/lib/index.js):
+Error: Cannot find package 'babel-plugin-syntax-dynamic-import' imported from /Users/karimhartono/blwork/workspace/learn-haml/blog/babel-virtual-resolve-base.js
+    at __node_internal_ (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/vendor/import-meta-resolve.js:233:9)
+    at new NodeError (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/vendor/import-meta-resolve.js:203:5)
+    at packageResolve (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/vendor/import-meta-resolve.js:872:9)
+    at moduleResolve (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/vendor/import-meta-resolve.js:901:20)
+    at defaultResolve (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/vendor/import-meta-resolve.js:984:15)
+    at resolve (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/vendor/import-meta-resolve.js:998:12)
+    at resolve (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/files/import-meta-resolve.js:13:10)
+    at tryImportMetaResolve (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/files/plugins.js:123:45)
+    at resolveStandardizedNameForImport (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/files/plugins.js:145:19)
+    at resolveStandardizedName (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/files/plugins.js:154:12)
+    at loadPlugin (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/files/plugins.js:47:20)
+    at loadPlugin.next (<anonymous>)
+    at createDescriptor (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/config-descriptors.js:139:16)
+    at createDescriptor.next (<anonymous>)
+    at step (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:261:32)
+    at evaluateAsync (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:291:5)
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:44:11
+    at Array.forEach (<anonymous>)
+    at Function.async (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:43:15)
+    at Function.all (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:216:13)
+    at Generator.next (<anonymous>)
+    at createDescriptors (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/config-descriptors.js:101:41)
+    at createDescriptors.next (<anonymous>)
+    at createPluginDescriptors (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/config-descriptors.js:98:17)
+    at createPluginDescriptors.next (<anonymous>)
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/gensync-utils/functional.js:21:23
+    at Generator.next (<anonymous>)
+    at mergeChainOpts (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/config-chain.js:349:34)
+    at mergeChainOpts.next (<anonymous>)
+    at chainWalker (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/config-chain.js:316:14)
+    at chainWalker.next (<anonymous>)
+    at loadFileChain (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/config-chain.js:192:24)
+    at loadFileChain.next (<anonymous>)
+    at buildRootChain (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/config-chain.js:109:31)
+    at buildRootChain.next (<anonymous>)
+    at loadPrivatePartialConfig (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/partial.js:79:62)
+    at loadPrivatePartialConfig.next (<anonymous>)
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/partial.js:122:25
+    at Generator.next (<anonymous>)
+    at step (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:269:25)
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:273:13
+    at async.call.result.err.err (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:223:11)
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:50:45
+    at step (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:287:14)
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:273:13
+    at async.call.result.err.err (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:223:11)
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:189:28
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/gensync-utils/async.js:68:7
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:113:33
+    at step (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:287:14)
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:273:13
+    at async.call.result.err.err (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:223:11)
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:189:28
+    at FSReqCallback.readFileAfterClose [as oncomplete] (internal/fs/read_file_context.js:63:3)
+
+(node:3907) UnhandledPromiseRejectionWarning: Error: Cannot find package 'babel-plugin-syntax-dynamic-import' imported from /Users/karimhartono/blwork/workspace/learn-haml/blog/babel-virtual-resolve-base.js
+    at __node_internal_ (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/vendor/import-meta-resolve.js:233:9)
+    at new NodeError (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/vendor/import-meta-resolve.js:203:5)
+    at packageResolve (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/vendor/import-meta-resolve.js:872:9)
+    at moduleResolve (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/vendor/import-meta-resolve.js:901:20)
+    at defaultResolve (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/vendor/import-meta-resolve.js:984:15)
+    at resolve (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/vendor/import-meta-resolve.js:998:12)
+    at resolve (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/files/import-meta-resolve.js:13:10)
+    at tryImportMetaResolve (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/files/plugins.js:123:45)
+    at resolveStandardizedNameForImport (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/files/plugins.js:145:19)
+    at resolveStandardizedName (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/files/plugins.js:154:12)
+    at loadPlugin (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/files/plugins.js:47:20)
+    at loadPlugin.next (<anonymous>)
+    at createDescriptor (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/config-descriptors.js:139:16)
+    at createDescriptor.next (<anonymous>)
+    at step (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:261:32)
+    at evaluateAsync (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:291:5)
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:44:11
+    at Array.forEach (<anonymous>)
+    at Function.async (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:43:15)
+    at Function.all (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:216:13)
+    at Generator.next (<anonymous>)
+    at createDescriptors (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/config-descriptors.js:101:41)
+    at createDescriptors.next (<anonymous>)
+    at createPluginDescriptors (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/config-descriptors.js:98:17)
+    at createPluginDescriptors.next (<anonymous>)
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/gensync-utils/functional.js:21:23
+    at Generator.next (<anonymous>)
+    at mergeChainOpts (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/config-chain.js:349:34)
+    at mergeChainOpts.next (<anonymous>)
+    at chainWalker (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/config-chain.js:316:14)
+    at chainWalker.next (<anonymous>)
+    at loadFileChain (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/config-chain.js:192:24)
+    at loadFileChain.next (<anonymous>)
+    at buildRootChain (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/config-chain.js:109:31)
+    at buildRootChain.next (<anonymous>)
+    at loadPrivatePartialConfig (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/partial.js:79:62)
+    at loadPrivatePartialConfig.next (<anonymous>)
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/partial.js:122:25
+    at Generator.next (<anonymous>)
+    at step (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:269:25)
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:273:13
+    at async.call.result.err.err (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:223:11)
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:50:45
+    at step (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:287:14)
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:273:13
+    at async.call.result.err.err (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:223:11)
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:189:28
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/gensync-utils/async.js:68:7
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:113:33
+    at step (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:287:14)
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:273:13
+    at async.call.result.err.err (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:223:11)
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:189:28
+    at FSReqCallback.readFileAfterClose [as oncomplete] (internal/fs/read_file_context.js:63:3)
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:3907) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 1)
+(node:3907) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+
+  Rendered articles/index.html.haml within layouts/application (1021.6ms)
+Completed 200 OK in 1171ms (Views: 1163.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2023-05-17 21:30:54 +0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ArticlesController#index as HTML
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+Hash: 3a0e19493bf166e16dcf
+Version: webpack 4.46.0
+Time: 185ms
+Built at: 05/17/2023 9:30:55 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-385e71becb2a54b8e40c.js   9.63 KiB  application  [emitted] [immutable]  application
+js/application-385e71becb2a54b8e40c.js.map   3.53 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-385e71becb2a54b8e40c.js js/application-385e71becb2a54b8e40c.js.map
+[./app/javascript/packs/application.js] 5.73 KiB {application} [built] [failed] [1 error]
+
+ERROR in ./app/javascript/packs/application.js
+Module build failed (from ./node_modules/babel-loader/lib/index.js):
+Error: Cannot find package 'babel-plugin-syntax-dynamic-import' imported from /Users/karimhartono/blwork/workspace/learn-haml/blog/babel-virtual-resolve-base.js
+    at __node_internal_ (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/vendor/import-meta-resolve.js:233:9)
+    at new NodeError (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/vendor/import-meta-resolve.js:203:5)
+    at packageResolve (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/vendor/import-meta-resolve.js:872:9)
+    at moduleResolve (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/vendor/import-meta-resolve.js:901:20)
+    at defaultResolve (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/vendor/import-meta-resolve.js:984:15)
+    at resolve (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/vendor/import-meta-resolve.js:998:12)
+    at resolve (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/files/import-meta-resolve.js:13:10)
+    at tryImportMetaResolve (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/files/plugins.js:123:45)
+    at resolveStandardizedNameForImport (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/files/plugins.js:145:19)
+    at resolveStandardizedName (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/files/plugins.js:154:12)
+    at loadPlugin (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/files/plugins.js:47:20)
+    at loadPlugin.next (<anonymous>)
+    at createDescriptor (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/config-descriptors.js:139:16)
+    at createDescriptor.next (<anonymous>)
+    at step (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:261:32)
+    at evaluateAsync (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:291:5)
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:44:11
+    at Array.forEach (<anonymous>)
+    at Function.async (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:43:15)
+    at Function.all (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:216:13)
+    at Generator.next (<anonymous>)
+    at createDescriptors (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/config-descriptors.js:101:41)
+    at createDescriptors.next (<anonymous>)
+    at createPluginDescriptors (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/config-descriptors.js:98:17)
+    at createPluginDescriptors.next (<anonymous>)
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/gensync-utils/functional.js:21:23
+    at Generator.next (<anonymous>)
+    at mergeChainOpts (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/config-chain.js:349:34)
+    at mergeChainOpts.next (<anonymous>)
+    at chainWalker (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/config-chain.js:316:14)
+    at chainWalker.next (<anonymous>)
+    at loadFileChain (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/config-chain.js:192:24)
+    at loadFileChain.next (<anonymous>)
+    at buildRootChain (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/config-chain.js:109:31)
+    at buildRootChain.next (<anonymous>)
+    at loadPrivatePartialConfig (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/partial.js:79:62)
+    at loadPrivatePartialConfig.next (<anonymous>)
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/partial.js:122:25
+    at Generator.next (<anonymous>)
+    at step (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:269:25)
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:273:13
+    at async.call.result.err.err (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:223:11)
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:50:45
+    at step (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:287:14)
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:273:13
+    at async.call.result.err.err (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:223:11)
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:189:28
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/gensync-utils/async.js:68:7
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:113:33
+    at step (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:287:14)
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:273:13
+    at async.call.result.err.err (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:223:11)
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:189:28
+    at FSReqCallback.readFileAfterClose [as oncomplete] (internal/fs/read_file_context.js:63:3)
+
+(node:3987) UnhandledPromiseRejectionWarning: Error: Cannot find package 'babel-plugin-syntax-dynamic-import' imported from /Users/karimhartono/blwork/workspace/learn-haml/blog/babel-virtual-resolve-base.js
+    at __node_internal_ (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/vendor/import-meta-resolve.js:233:9)
+    at new NodeError (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/vendor/import-meta-resolve.js:203:5)
+    at packageResolve (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/vendor/import-meta-resolve.js:872:9)
+    at moduleResolve (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/vendor/import-meta-resolve.js:901:20)
+    at defaultResolve (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/vendor/import-meta-resolve.js:984:15)
+    at resolve (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/vendor/import-meta-resolve.js:998:12)
+    at resolve (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/files/import-meta-resolve.js:13:10)
+    at tryImportMetaResolve (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/files/plugins.js:123:45)
+    at resolveStandardizedNameForImport (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/files/plugins.js:145:19)
+    at resolveStandardizedName (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/files/plugins.js:154:12)
+    at loadPlugin (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/files/plugins.js:47:20)
+    at loadPlugin.next (<anonymous>)
+    at createDescriptor (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/config-descriptors.js:139:16)
+    at createDescriptor.next (<anonymous>)
+    at step (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:261:32)
+    at evaluateAsync (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:291:5)
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:44:11
+    at Array.forEach (<anonymous>)
+    at Function.async (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:43:15)
+    at Function.all (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:216:13)
+    at Generator.next (<anonymous>)
+    at createDescriptors (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/config-descriptors.js:101:41)
+    at createDescriptors.next (<anonymous>)
+    at createPluginDescriptors (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/config-descriptors.js:98:17)
+    at createPluginDescriptors.next (<anonymous>)
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/gensync-utils/functional.js:21:23
+    at Generator.next (<anonymous>)
+    at mergeChainOpts (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/config-chain.js:349:34)
+    at mergeChainOpts.next (<anonymous>)
+    at chainWalker (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/config-chain.js:316:14)
+    at chainWalker.next (<anonymous>)
+    at loadFileChain (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/config-chain.js:192:24)
+    at loadFileChain.next (<anonymous>)
+    at buildRootChain (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/config-chain.js:109:31)
+    at buildRootChain.next (<anonymous>)
+    at loadPrivatePartialConfig (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/partial.js:79:62)
+    at loadPrivatePartialConfig.next (<anonymous>)
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/partial.js:122:25
+    at Generator.next (<anonymous>)
+    at step (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:269:25)
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:273:13
+    at async.call.result.err.err (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:223:11)
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:50:45
+    at step (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:287:14)
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:273:13
+    at async.call.result.err.err (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:223:11)
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:189:28
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/gensync-utils/async.js:68:7
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:113:33
+    at step (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:287:14)
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:273:13
+    at async.call.result.err.err (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:223:11)
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:189:28
+    at FSReqCallback.readFileAfterClose [as oncomplete] (internal/fs/read_file_context.js:63:3)
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:3987) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 1)
+(node:3987) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+
+  Rendered articles/index.html.haml within layouts/application (853.9ms)
+Completed 200 OK in 990ms (Views: 983.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2023-05-17 21:32:32 +0700
+Processing by ArticlesController#index as HTML
+  Rendered articles/index.html.haml within layouts/application (8.5ms)
+Completed 200 OK in 30ms (Views: 29.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/articles.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2023-05-17 21:32:32 +0700
+
+
+Started GET "/assets/comments.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2023-05-17 21:32:32 +0700
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2023-05-17 21:32:32 +0700
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2023-05-17 21:32:32 +0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2023-05-17 21:32:32 +0700
+
+
+Started GET "/assets/turbolinks.self-569ee74eaa15c1e2019317ff770b8769b1ec033a0f572a485f64c82ddc8f989e.js?body=1" for ::1 at 2023-05-17 21:32:32 +0700
+
+
+Started GET "/assets/articles.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2023-05-17 21:32:32 +0700
+
+
+Started GET "/assets/comments.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2023-05-17 21:32:32 +0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2023-05-17 21:32:32 +0700
+
+
+Started GET "/" for ::1 at 2023-05-17 21:34:51 +0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ArticlesController#index as HTML
+  Rendered articles/index.html.haml within layouts/application (5.3ms)
+Completed 200 OK in 136ms (Views: 128.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/comments.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2023-05-17 21:34:51 +0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2023-05-17 21:34:51 +0700
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2023-05-17 21:34:51 +0700
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2023-05-17 21:34:51 +0700
+
+
+Started GET "/assets/turbolinks.self-569ee74eaa15c1e2019317ff770b8769b1ec033a0f572a485f64c82ddc8f989e.js?body=1" for ::1 at 2023-05-17 21:34:51 +0700
+
+
+Started GET "/assets/comments.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2023-05-17 21:34:51 +0700
+
+
+Started GET "/assets/articles.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2023-05-17 21:34:51 +0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2023-05-17 21:34:51 +0700
+
+
+Started GET "/assets/articles.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2023-05-17 21:34:51 +0700
+
+
+Started GET "/" for ::1 at 2023-05-17 21:35:18 +0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ArticlesController#index as HTML
+  Rendered articles/index.html.haml within layouts/application (4.8ms)
+Completed 200 OK in 133ms (Views: 126.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/articles.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2023-05-17 21:35:18 +0700
+
+
+Started GET "/assets/comments.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2023-05-17 21:35:18 +0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2023-05-17 21:35:18 +0700
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2023-05-17 21:35:18 +0700
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2023-05-17 21:35:18 +0700
+
+
+Started GET "/assets/turbolinks.self-569ee74eaa15c1e2019317ff770b8769b1ec033a0f572a485f64c82ddc8f989e.js?body=1" for ::1 at 2023-05-17 21:35:18 +0700
+
+
+Started GET "/assets/articles.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2023-05-17 21:35:18 +0700
+
+
+Started GET "/assets/comments.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2023-05-17 21:35:18 +0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2023-05-17 21:35:18 +0700
+
+
+Started GET "/" for ::1 at 2023-05-17 21:37:32 +0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ArticlesController#index as HTML
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+Hash: 3a0e19493bf166e16dcf
+Version: webpack 4.46.0
+Time: 199ms
+Built at: 05/17/2023 9:37:33 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-385e71becb2a54b8e40c.js   9.63 KiB  application  [emitted] [immutable]  application
+js/application-385e71becb2a54b8e40c.js.map   3.53 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-385e71becb2a54b8e40c.js js/application-385e71becb2a54b8e40c.js.map
+[./app/javascript/packs/application.js] 5.73 KiB {application} [built] [failed] [1 error]
+
+ERROR in ./app/javascript/packs/application.js
+Module build failed (from ./node_modules/babel-loader/lib/index.js):
+Error: Cannot find package 'babel-plugin-syntax-dynamic-import' imported from /Users/karimhartono/blwork/workspace/learn-haml/blog/babel-virtual-resolve-base.js
+    at __node_internal_ (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/vendor/import-meta-resolve.js:233:9)
+    at new NodeError (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/vendor/import-meta-resolve.js:203:5)
+    at packageResolve (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/vendor/import-meta-resolve.js:872:9)
+    at moduleResolve (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/vendor/import-meta-resolve.js:901:20)
+    at defaultResolve (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/vendor/import-meta-resolve.js:984:15)
+    at resolve (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/vendor/import-meta-resolve.js:998:12)
+    at resolve (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/files/import-meta-resolve.js:13:10)
+    at tryImportMetaResolve (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/files/plugins.js:123:45)
+    at resolveStandardizedNameForImport (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/files/plugins.js:145:19)
+    at resolveStandardizedName (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/files/plugins.js:154:12)
+    at loadPlugin (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/files/plugins.js:47:20)
+    at loadPlugin.next (<anonymous>)
+    at createDescriptor (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/config-descriptors.js:139:16)
+    at createDescriptor.next (<anonymous>)
+    at step (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:261:32)
+    at evaluateAsync (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:291:5)
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:44:11
+    at Array.forEach (<anonymous>)
+    at Function.async (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:43:15)
+    at Function.all (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:216:13)
+    at Generator.next (<anonymous>)
+    at createDescriptors (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/config-descriptors.js:101:41)
+    at createDescriptors.next (<anonymous>)
+    at createPluginDescriptors (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/config-descriptors.js:98:17)
+    at createPluginDescriptors.next (<anonymous>)
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/gensync-utils/functional.js:21:23
+    at Generator.next (<anonymous>)
+    at mergeChainOpts (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/config-chain.js:349:34)
+    at mergeChainOpts.next (<anonymous>)
+    at chainWalker (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/config-chain.js:316:14)
+    at chainWalker.next (<anonymous>)
+    at loadFileChain (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/config-chain.js:192:24)
+    at loadFileChain.next (<anonymous>)
+    at buildRootChain (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/config-chain.js:109:31)
+    at buildRootChain.next (<anonymous>)
+    at loadPrivatePartialConfig (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/partial.js:79:62)
+    at loadPrivatePartialConfig.next (<anonymous>)
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/partial.js:122:25
+    at Generator.next (<anonymous>)
+    at step (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:269:25)
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:273:13
+    at async.call.result.err.err (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:223:11)
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:50:45
+    at step (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:287:14)
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:273:13
+    at async.call.result.err.err (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:223:11)
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:189:28
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/gensync-utils/async.js:68:7
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:113:33
+    at step (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:287:14)
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:273:13
+    at async.call.result.err.err (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:223:11)
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:189:28
+    at FSReqCallback.readFileAfterClose [as oncomplete] (internal/fs/read_file_context.js:63:3)
+
+(node:4893) UnhandledPromiseRejectionWarning: Error: Cannot find package 'babel-plugin-syntax-dynamic-import' imported from /Users/karimhartono/blwork/workspace/learn-haml/blog/babel-virtual-resolve-base.js
+    at __node_internal_ (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/vendor/import-meta-resolve.js:233:9)
+    at new NodeError (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/vendor/import-meta-resolve.js:203:5)
+    at packageResolve (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/vendor/import-meta-resolve.js:872:9)
+    at moduleResolve (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/vendor/import-meta-resolve.js:901:20)
+    at defaultResolve (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/vendor/import-meta-resolve.js:984:15)
+    at resolve (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/vendor/import-meta-resolve.js:998:12)
+    at resolve (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/files/import-meta-resolve.js:13:10)
+    at tryImportMetaResolve (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/files/plugins.js:123:45)
+    at resolveStandardizedNameForImport (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/files/plugins.js:145:19)
+    at resolveStandardizedName (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/files/plugins.js:154:12)
+    at loadPlugin (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/files/plugins.js:47:20)
+    at loadPlugin.next (<anonymous>)
+    at createDescriptor (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/config-descriptors.js:139:16)
+    at createDescriptor.next (<anonymous>)
+    at step (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:261:32)
+    at evaluateAsync (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:291:5)
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:44:11
+    at Array.forEach (<anonymous>)
+    at Function.async (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:43:15)
+    at Function.all (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:216:13)
+    at Generator.next (<anonymous>)
+    at createDescriptors (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/config-descriptors.js:101:41)
+    at createDescriptors.next (<anonymous>)
+    at createPluginDescriptors (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/config-descriptors.js:98:17)
+    at createPluginDescriptors.next (<anonymous>)
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/gensync-utils/functional.js:21:23
+    at Generator.next (<anonymous>)
+    at mergeChainOpts (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/config-chain.js:349:34)
+    at mergeChainOpts.next (<anonymous>)
+    at chainWalker (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/config-chain.js:316:14)
+    at chainWalker.next (<anonymous>)
+    at loadFileChain (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/config-chain.js:192:24)
+    at loadFileChain.next (<anonymous>)
+    at buildRootChain (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/config-chain.js:109:31)
+    at buildRootChain.next (<anonymous>)
+    at loadPrivatePartialConfig (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/partial.js:79:62)
+    at loadPrivatePartialConfig.next (<anonymous>)
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/partial.js:122:25
+    at Generator.next (<anonymous>)
+    at step (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:269:25)
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:273:13
+    at async.call.result.err.err (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:223:11)
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:50:45
+    at step (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:287:14)
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:273:13
+    at async.call.result.err.err (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:223:11)
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:189:28
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/gensync-utils/async.js:68:7
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:113:33
+    at step (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:287:14)
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:273:13
+    at async.call.result.err.err (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:223:11)
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:189:28
+    at FSReqCallback.readFileAfterClose [as oncomplete] (internal/fs/read_file_context.js:63:3)
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:4893) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 1)
+(node:4893) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+
+  Rendered articles/index.html.haml within layouts/application (1183.6ms)
+Completed 200 OK in 1329ms (Views: 1321.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/comments.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2023-05-17 21:37:33 +0700
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2023-05-17 21:37:33 +0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2023-05-17 21:37:33 +0700
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2023-05-17 21:37:33 +0700
+
+
+Started GET "/assets/turbolinks.self-569ee74eaa15c1e2019317ff770b8769b1ec033a0f572a485f64c82ddc8f989e.js?body=1" for ::1 at 2023-05-17 21:37:33 +0700
+
+
+Started GET "/assets/articles.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2023-05-17 21:37:33 +0700
+
+
+Started GET "/assets/articles.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2023-05-17 21:37:33 +0700
+
+
+Started GET "/assets/comments.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2023-05-17 21:37:33 +0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2023-05-17 21:37:33 +0700
+
+
+Started GET "/" for ::1 at 2023-05-17 21:38:48 +0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ArticlesController#index as HTML
+  Rendered articles/index.html.haml within layouts/application (4.9ms)
+Completed 200 OK in 126ms (Views: 119.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2023-05-17 21:38:51 +0700
+Processing by ArticlesController#index as HTML
+  Rendered articles/index.html.haml within layouts/application (4.4ms)
+Completed 200 OK in 22ms (Views: 21.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2023-05-17 21:40:29 +0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ArticlesController#index as HTML
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+Hash: 3a0e19493bf166e16dcf
+Version: webpack 4.46.0
+Time: 165ms
+Built at: 05/17/2023 9:40:30 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-385e71becb2a54b8e40c.js   9.63 KiB  application  [emitted] [immutable]  application
+js/application-385e71becb2a54b8e40c.js.map   3.53 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-385e71becb2a54b8e40c.js js/application-385e71becb2a54b8e40c.js.map
+[./app/javascript/packs/application.js] 5.73 KiB {application} [built] [failed] [1 error]
+
+ERROR in ./app/javascript/packs/application.js
+Module build failed (from ./node_modules/babel-loader/lib/index.js):
+Error: Cannot find package 'babel-plugin-syntax-dynamic-import' imported from /Users/karimhartono/blwork/workspace/learn-haml/blog/babel-virtual-resolve-base.js
+    at __node_internal_ (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/vendor/import-meta-resolve.js:233:9)
+    at new NodeError (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/vendor/import-meta-resolve.js:203:5)
+    at packageResolve (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/vendor/import-meta-resolve.js:872:9)
+    at moduleResolve (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/vendor/import-meta-resolve.js:901:20)
+    at defaultResolve (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/vendor/import-meta-resolve.js:984:15)
+    at resolve (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/vendor/import-meta-resolve.js:998:12)
+    at resolve (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/files/import-meta-resolve.js:13:10)
+    at tryImportMetaResolve (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/files/plugins.js:123:45)
+    at resolveStandardizedNameForImport (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/files/plugins.js:145:19)
+    at resolveStandardizedName (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/files/plugins.js:154:12)
+    at loadPlugin (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/files/plugins.js:47:20)
+    at loadPlugin.next (<anonymous>)
+    at createDescriptor (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/config-descriptors.js:139:16)
+    at createDescriptor.next (<anonymous>)
+    at step (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:261:32)
+    at evaluateAsync (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:291:5)
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:44:11
+    at Array.forEach (<anonymous>)
+    at Function.async (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:43:15)
+    at Function.all (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:216:13)
+    at Generator.next (<anonymous>)
+    at createDescriptors (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/config-descriptors.js:101:41)
+    at createDescriptors.next (<anonymous>)
+    at createPluginDescriptors (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/config-descriptors.js:98:17)
+    at createPluginDescriptors.next (<anonymous>)
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/gensync-utils/functional.js:21:23
+    at Generator.next (<anonymous>)
+    at mergeChainOpts (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/config-chain.js:349:34)
+    at mergeChainOpts.next (<anonymous>)
+    at chainWalker (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/config-chain.js:316:14)
+    at chainWalker.next (<anonymous>)
+    at loadFileChain (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/config-chain.js:192:24)
+    at loadFileChain.next (<anonymous>)
+    at buildRootChain (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/config-chain.js:109:31)
+    at buildRootChain.next (<anonymous>)
+    at loadPrivatePartialConfig (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/partial.js:79:62)
+    at loadPrivatePartialConfig.next (<anonymous>)
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/partial.js:122:25
+    at Generator.next (<anonymous>)
+    at step (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:269:25)
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:273:13
+    at async.call.result.err.err (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:223:11)
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:50:45
+    at step (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:287:14)
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:273:13
+    at async.call.result.err.err (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:223:11)
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:189:28
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/gensync-utils/async.js:68:7
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:113:33
+    at step (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:287:14)
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:273:13
+    at async.call.result.err.err (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:223:11)
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:189:28
+    at FSReqCallback.readFileAfterClose [as oncomplete] (internal/fs/read_file_context.js:63:3)
+
+(node:5001) UnhandledPromiseRejectionWarning: Error: Cannot find package 'babel-plugin-syntax-dynamic-import' imported from /Users/karimhartono/blwork/workspace/learn-haml/blog/babel-virtual-resolve-base.js
+    at __node_internal_ (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/vendor/import-meta-resolve.js:233:9)
+    at new NodeError (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/vendor/import-meta-resolve.js:203:5)
+    at packageResolve (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/vendor/import-meta-resolve.js:872:9)
+    at moduleResolve (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/vendor/import-meta-resolve.js:901:20)
+    at defaultResolve (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/vendor/import-meta-resolve.js:984:15)
+    at resolve (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/vendor/import-meta-resolve.js:998:12)
+    at resolve (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/files/import-meta-resolve.js:13:10)
+    at tryImportMetaResolve (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/files/plugins.js:123:45)
+    at resolveStandardizedNameForImport (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/files/plugins.js:145:19)
+    at resolveStandardizedName (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/files/plugins.js:154:12)
+    at loadPlugin (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/files/plugins.js:47:20)
+    at loadPlugin.next (<anonymous>)
+    at createDescriptor (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/config-descriptors.js:139:16)
+    at createDescriptor.next (<anonymous>)
+    at step (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:261:32)
+    at evaluateAsync (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:291:5)
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:44:11
+    at Array.forEach (<anonymous>)
+    at Function.async (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:43:15)
+    at Function.all (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:216:13)
+    at Generator.next (<anonymous>)
+    at createDescriptors (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/config-descriptors.js:101:41)
+    at createDescriptors.next (<anonymous>)
+    at createPluginDescriptors (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/config-descriptors.js:98:17)
+    at createPluginDescriptors.next (<anonymous>)
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/gensync-utils/functional.js:21:23
+    at Generator.next (<anonymous>)
+    at mergeChainOpts (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/config-chain.js:349:34)
+    at mergeChainOpts.next (<anonymous>)
+    at chainWalker (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/config-chain.js:316:14)
+    at chainWalker.next (<anonymous>)
+    at loadFileChain (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/config-chain.js:192:24)
+    at loadFileChain.next (<anonymous>)
+    at buildRootChain (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/config-chain.js:109:31)
+    at buildRootChain.next (<anonymous>)
+    at loadPrivatePartialConfig (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/partial.js:79:62)
+    at loadPrivatePartialConfig.next (<anonymous>)
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/partial.js:122:25
+    at Generator.next (<anonymous>)
+    at step (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:269:25)
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:273:13
+    at async.call.result.err.err (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:223:11)
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:50:45
+    at step (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:287:14)
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:273:13
+    at async.call.result.err.err (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:223:11)
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:189:28
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/gensync-utils/async.js:68:7
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:113:33
+    at step (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:287:14)
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:273:13
+    at async.call.result.err.err (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:223:11)
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:189:28
+    at FSReqCallback.readFileAfterClose [as oncomplete] (internal/fs/read_file_context.js:63:3)
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:5001) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 1)
+(node:5001) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+
+  Rendered articles/index.html.haml within layouts/application (782.1ms)
+Completed 200 OK in 915ms (Views: 908.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2023-05-17 21:40:57 +0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ArticlesController#index as HTML
+  Rendered articles/index.html.haml within layouts/application (5.5ms)
+Completed 200 OK in 126ms (Views: 119.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2023-05-17 21:41:22 +0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ArticlesController#index as HTML
+  Rendered articles/index.html.haml within layouts/application (4.2ms)
+Completed 200 OK in 125ms (Views: 117.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2023-05-17 21:41:48 +0700
+Processing by ArticlesController#index as HTML
+  Rendered articles/index.html.haml within layouts/application (4.9ms)
+Completed 200 OK in 22ms (Views: 21.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2023-05-17 21:43:05 +0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ArticlesController#index as HTML
+  Rendered articles/index.html.haml within layouts/application (4.6ms)
+Completed 200 OK in 124ms (Views: 118.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2023-05-17 21:43:33 +0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ArticlesController#index as HTML
+  Rendered articles/index.html.haml within layouts/application (2.9ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (The line was indented 2 levels deeper than the previous line.):
+     5:   %body
+     6:     %h1 My Sample Page
+     7:     %p#myText
+     8:         :javascript
+     9:           document.addEventListener('DOMContentLoaded', function() {
+    10:             var hardcodedText = "Hello, World!";
+    11:             document.getElementById('myText').textContent = hardcodedText;
+  app/views/articles/index.html.haml:8
+
+
+  Rendered /Users/karimhartono/.rvm/gems/ruby-2.6.8/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.5ms)
+  Rendered /Users/karimhartono/.rvm/gems/ruby-2.6.8/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /Users/karimhartono/.rvm/gems/ruby-2.6.8/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.4ms)
+  Rendered /Users/karimhartono/.rvm/gems/ruby-2.6.8/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (15.1ms)
+  Rendered /Users/karimhartono/.rvm/gems/ruby-2.6.8/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/karimhartono/.rvm/gems/ruby-2.6.8/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.1ms)
+  Rendered /Users/karimhartono/.rvm/gems/ruby-2.6.8/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.1ms)
+  Rendered /Users/karimhartono/.rvm/gems/ruby-2.6.8/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/karimhartono/.rvm/gems/ruby-2.6.8/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (14.4ms)
+  Rendered /Users/karimhartono/.rvm/gems/ruby-2.6.8/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.1ms)
+  Rendered /Users/karimhartono/.rvm/gems/ruby-2.6.8/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/karimhartono/.rvm/gems/ruby-2.6.8/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (28.6ms)
+
+
+Started GET "/" for ::1 at 2023-05-17 21:44:02 +0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ArticlesController#index as HTML
+  Rendered articles/index.html.haml within layouts/application (5.1ms)
+Completed 200 OK in 134ms (Views: 127.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2023-05-17 21:44:22 +0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ArticlesController#index as HTML
+  Rendered articles/index.html.haml within layouts/application (4.7ms)
+Completed 200 OK in 120ms (Views: 113.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/articles.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2023-05-17 21:44:22 +0700
+
+
+Started GET "/assets/comments.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2023-05-17 21:44:22 +0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2023-05-17 21:44:22 +0700
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2023-05-17 21:44:22 +0700
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2023-05-17 21:44:22 +0700
+
+
+Started GET "/assets/turbolinks.self-569ee74eaa15c1e2019317ff770b8769b1ec033a0f572a485f64c82ddc8f989e.js?body=1" for ::1 at 2023-05-17 21:44:22 +0700
+
+
+Started GET "/assets/articles.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2023-05-17 21:44:22 +0700
+
+
+Started GET "/assets/comments.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2023-05-17 21:44:22 +0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2023-05-17 21:44:22 +0700
+
+
+Started GET "/" for ::1 at 2023-05-17 21:45:11 +0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ArticlesController#index as HTML
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+Hash: 3a0e19493bf166e16dcf
+Version: webpack 4.46.0
+Time: 195ms
+Built at: 05/17/2023 9:45:12 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-385e71becb2a54b8e40c.js   9.63 KiB  application  [emitted] [immutable]  application
+js/application-385e71becb2a54b8e40c.js.map   3.53 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-385e71becb2a54b8e40c.js js/application-385e71becb2a54b8e40c.js.map
+[./app/javascript/packs/application.js] 5.73 KiB {application} [built] [failed] [1 error]
+
+ERROR in ./app/javascript/packs/application.js
+Module build failed (from ./node_modules/babel-loader/lib/index.js):
+Error: Cannot find package 'babel-plugin-syntax-dynamic-import' imported from /Users/karimhartono/blwork/workspace/learn-haml/blog/babel-virtual-resolve-base.js
+    at __node_internal_ (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/vendor/import-meta-resolve.js:233:9)
+    at new NodeError (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/vendor/import-meta-resolve.js:203:5)
+    at packageResolve (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/vendor/import-meta-resolve.js:872:9)
+    at moduleResolve (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/vendor/import-meta-resolve.js:901:20)
+    at defaultResolve (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/vendor/import-meta-resolve.js:984:15)
+    at resolve (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/vendor/import-meta-resolve.js:998:12)
+    at resolve (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/files/import-meta-resolve.js:13:10)
+    at tryImportMetaResolve (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/files/plugins.js:123:45)
+    at resolveStandardizedNameForImport (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/files/plugins.js:145:19)
+    at resolveStandardizedName (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/files/plugins.js:154:12)
+    at loadPlugin (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/files/plugins.js:47:20)
+    at loadPlugin.next (<anonymous>)
+    at createDescriptor (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/config-descriptors.js:139:16)
+    at createDescriptor.next (<anonymous>)
+    at step (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:261:32)
+    at evaluateAsync (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:291:5)
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:44:11
+    at Array.forEach (<anonymous>)
+    at Function.async (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:43:15)
+    at Function.all (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:216:13)
+    at Generator.next (<anonymous>)
+    at createDescriptors (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/config-descriptors.js:101:41)
+    at createDescriptors.next (<anonymous>)
+    at createPluginDescriptors (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/config-descriptors.js:98:17)
+    at createPluginDescriptors.next (<anonymous>)
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/gensync-utils/functional.js:21:23
+    at Generator.next (<anonymous>)
+    at mergeChainOpts (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/config-chain.js:349:34)
+    at mergeChainOpts.next (<anonymous>)
+    at chainWalker (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/config-chain.js:316:14)
+    at chainWalker.next (<anonymous>)
+    at loadFileChain (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/config-chain.js:192:24)
+    at loadFileChain.next (<anonymous>)
+    at buildRootChain (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/config-chain.js:109:31)
+    at buildRootChain.next (<anonymous>)
+    at loadPrivatePartialConfig (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/partial.js:79:62)
+    at loadPrivatePartialConfig.next (<anonymous>)
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/partial.js:122:25
+    at Generator.next (<anonymous>)
+    at step (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:269:25)
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:273:13
+    at async.call.result.err.err (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:223:11)
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:50:45
+    at step (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:287:14)
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:273:13
+    at async.call.result.err.err (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:223:11)
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:189:28
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/gensync-utils/async.js:68:7
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:113:33
+    at step (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:287:14)
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:273:13
+    at async.call.result.err.err (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:223:11)
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:189:28
+    at FSReqCallback.readFileAfterClose [as oncomplete] (internal/fs/read_file_context.js:63:3)
+
+(node:5251) UnhandledPromiseRejectionWarning: Error: Cannot find package 'babel-plugin-syntax-dynamic-import' imported from /Users/karimhartono/blwork/workspace/learn-haml/blog/babel-virtual-resolve-base.js
+    at __node_internal_ (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/vendor/import-meta-resolve.js:233:9)
+    at new NodeError (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/vendor/import-meta-resolve.js:203:5)
+    at packageResolve (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/vendor/import-meta-resolve.js:872:9)
+    at moduleResolve (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/vendor/import-meta-resolve.js:901:20)
+    at defaultResolve (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/vendor/import-meta-resolve.js:984:15)
+    at resolve (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/vendor/import-meta-resolve.js:998:12)
+    at resolve (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/files/import-meta-resolve.js:13:10)
+    at tryImportMetaResolve (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/files/plugins.js:123:45)
+    at resolveStandardizedNameForImport (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/files/plugins.js:145:19)
+    at resolveStandardizedName (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/files/plugins.js:154:12)
+    at loadPlugin (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/files/plugins.js:47:20)
+    at loadPlugin.next (<anonymous>)
+    at createDescriptor (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/config-descriptors.js:139:16)
+    at createDescriptor.next (<anonymous>)
+    at step (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:261:32)
+    at evaluateAsync (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:291:5)
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:44:11
+    at Array.forEach (<anonymous>)
+    at Function.async (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:43:15)
+    at Function.all (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:216:13)
+    at Generator.next (<anonymous>)
+    at createDescriptors (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/config-descriptors.js:101:41)
+    at createDescriptors.next (<anonymous>)
+    at createPluginDescriptors (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/config-descriptors.js:98:17)
+    at createPluginDescriptors.next (<anonymous>)
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/gensync-utils/functional.js:21:23
+    at Generator.next (<anonymous>)
+    at mergeChainOpts (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/config-chain.js:349:34)
+    at mergeChainOpts.next (<anonymous>)
+    at chainWalker (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/config-chain.js:316:14)
+    at chainWalker.next (<anonymous>)
+    at loadFileChain (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/config-chain.js:192:24)
+    at loadFileChain.next (<anonymous>)
+    at buildRootChain (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/config-chain.js:109:31)
+    at buildRootChain.next (<anonymous>)
+    at loadPrivatePartialConfig (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/partial.js:79:62)
+    at loadPrivatePartialConfig.next (<anonymous>)
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/partial.js:122:25
+    at Generator.next (<anonymous>)
+    at step (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:269:25)
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:273:13
+    at async.call.result.err.err (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:223:11)
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:50:45
+    at step (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:287:14)
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:273:13
+    at async.call.result.err.err (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:223:11)
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:189:28
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/gensync-utils/async.js:68:7
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:113:33
+    at step (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:287:14)
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:273:13
+    at async.call.result.err.err (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:223:11)
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:189:28
+    at FSReqCallback.readFileAfterClose [as oncomplete] (internal/fs/read_file_context.js:63:3)
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:5251) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 1)
+(node:5251) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+
+  Rendered articles/index.html.haml within layouts/application (1006.8ms)
+Completed 200 OK in 1140ms (Views: 1133.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/articles.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2023-05-17 21:45:12 +0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2023-05-17 21:45:12 +0700
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2023-05-17 21:45:12 +0700
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2023-05-17 21:45:12 +0700
+
+
+Started GET "/assets/comments.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2023-05-17 21:45:12 +0700
+
+
+Started GET "/assets/turbolinks.self-569ee74eaa15c1e2019317ff770b8769b1ec033a0f572a485f64c82ddc8f989e.js?body=1" for ::1 at 2023-05-17 21:45:12 +0700
+
+
+Started GET "/assets/articles.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2023-05-17 21:45:12 +0700
+
+
+Started GET "/assets/comments.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2023-05-17 21:45:12 +0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2023-05-17 21:45:12 +0700
+
+
+Started GET "/" for ::1 at 2023-05-17 21:47:33 +0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ArticlesController#index as HTML
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+Hash: fa068e04eb2ae1429067
+Version: webpack 4.46.0
+Time: 191ms
+Built at: 05/17/2023 9:47:34 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-154c20c03dd79de10eb8.js   9.63 KiB  application  [emitted] [immutable]  application
+js/application-154c20c03dd79de10eb8.js.map   3.53 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-154c20c03dd79de10eb8.js js/application-154c20c03dd79de10eb8.js.map
+[./app/javascript/packs/application.js] 5.74 KiB {application} [built] [failed] [1 error]
+
+ERROR in ./app/javascript/packs/application.js
+Module build failed (from ./node_modules/babel-loader/lib/index.js):
+Error: Cannot find package 'babel-plugin-transform-object-rest-spread' imported from /Users/karimhartono/blwork/workspace/learn-haml/blog/babel-virtual-resolve-base.js
+    at __node_internal_ (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/vendor/import-meta-resolve.js:233:9)
+    at new NodeError (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/vendor/import-meta-resolve.js:203:5)
+    at packageResolve (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/vendor/import-meta-resolve.js:872:9)
+    at moduleResolve (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/vendor/import-meta-resolve.js:901:20)
+    at defaultResolve (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/vendor/import-meta-resolve.js:984:15)
+    at resolve (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/vendor/import-meta-resolve.js:998:12)
+    at resolve (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/files/import-meta-resolve.js:13:10)
+    at tryImportMetaResolve (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/files/plugins.js:123:45)
+    at resolveStandardizedNameForImport (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/files/plugins.js:145:19)
+    at resolveStandardizedName (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/files/plugins.js:154:12)
+    at loadPlugin (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/files/plugins.js:47:20)
+    at loadPlugin.next (<anonymous>)
+    at createDescriptor (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/config-descriptors.js:139:16)
+    at createDescriptor.next (<anonymous>)
+    at step (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:261:32)
+    at evaluateAsync (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:291:5)
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:44:11
+    at Array.forEach (<anonymous>)
+    at Function.async (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:43:15)
+    at Function.all (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:216:13)
+    at Generator.next (<anonymous>)
+    at createDescriptors (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/config-descriptors.js:101:41)
+    at createDescriptors.next (<anonymous>)
+    at createPluginDescriptors (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/config-descriptors.js:98:17)
+    at createPluginDescriptors.next (<anonymous>)
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/gensync-utils/functional.js:21:23
+    at Generator.next (<anonymous>)
+    at mergeChainOpts (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/config-chain.js:349:34)
+    at mergeChainOpts.next (<anonymous>)
+    at chainWalker (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/config-chain.js:316:14)
+    at chainWalker.next (<anonymous>)
+    at loadFileChain (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/config-chain.js:192:24)
+    at loadFileChain.next (<anonymous>)
+    at buildRootChain (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/config-chain.js:109:31)
+    at buildRootChain.next (<anonymous>)
+    at loadPrivatePartialConfig (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/partial.js:79:62)
+    at loadPrivatePartialConfig.next (<anonymous>)
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/partial.js:122:25
+    at Generator.next (<anonymous>)
+    at step (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:269:25)
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:273:13
+    at async.call.result.err.err (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:223:11)
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:50:45
+    at step (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:287:14)
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:273:13
+    at async.call.result.err.err (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:223:11)
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:189:28
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/gensync-utils/async.js:68:7
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:113:33
+    at step (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:287:14)
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:273:13
+    at async.call.result.err.err (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:223:11)
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:189:28
+    at FSReqCallback.readFileAfterClose [as oncomplete] (internal/fs/read_file_context.js:63:3)
+
+(node:5364) UnhandledPromiseRejectionWarning: Error: Cannot find package 'babel-plugin-transform-object-rest-spread' imported from /Users/karimhartono/blwork/workspace/learn-haml/blog/babel-virtual-resolve-base.js
+    at __node_internal_ (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/vendor/import-meta-resolve.js:233:9)
+    at new NodeError (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/vendor/import-meta-resolve.js:203:5)
+    at packageResolve (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/vendor/import-meta-resolve.js:872:9)
+    at moduleResolve (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/vendor/import-meta-resolve.js:901:20)
+    at defaultResolve (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/vendor/import-meta-resolve.js:984:15)
+    at resolve (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/vendor/import-meta-resolve.js:998:12)
+    at resolve (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/files/import-meta-resolve.js:13:10)
+    at tryImportMetaResolve (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/files/plugins.js:123:45)
+    at resolveStandardizedNameForImport (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/files/plugins.js:145:19)
+    at resolveStandardizedName (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/files/plugins.js:154:12)
+    at loadPlugin (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/files/plugins.js:47:20)
+    at loadPlugin.next (<anonymous>)
+    at createDescriptor (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/config-descriptors.js:139:16)
+    at createDescriptor.next (<anonymous>)
+    at step (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:261:32)
+    at evaluateAsync (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:291:5)
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:44:11
+    at Array.forEach (<anonymous>)
+    at Function.async (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:43:15)
+    at Function.all (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:216:13)
+    at Generator.next (<anonymous>)
+    at createDescriptors (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/config-descriptors.js:101:41)
+    at createDescriptors.next (<anonymous>)
+    at createPluginDescriptors (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/config-descriptors.js:98:17)
+    at createPluginDescriptors.next (<anonymous>)
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/gensync-utils/functional.js:21:23
+    at Generator.next (<anonymous>)
+    at mergeChainOpts (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/config-chain.js:349:34)
+    at mergeChainOpts.next (<anonymous>)
+    at chainWalker (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/config-chain.js:316:14)
+    at chainWalker.next (<anonymous>)
+    at loadFileChain (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/config-chain.js:192:24)
+    at loadFileChain.next (<anonymous>)
+    at buildRootChain (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/config-chain.js:109:31)
+    at buildRootChain.next (<anonymous>)
+    at loadPrivatePartialConfig (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/partial.js:79:62)
+    at loadPrivatePartialConfig.next (<anonymous>)
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/partial.js:122:25
+    at Generator.next (<anonymous>)
+    at step (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:269:25)
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:273:13
+    at async.call.result.err.err (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:223:11)
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:50:45
+    at step (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:287:14)
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:273:13
+    at async.call.result.err.err (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:223:11)
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:189:28
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/gensync-utils/async.js:68:7
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:113:33
+    at step (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:287:14)
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:273:13
+    at async.call.result.err.err (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:223:11)
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:189:28
+    at FSReqCallback.readFileAfterClose [as oncomplete] (internal/fs/read_file_context.js:63:3)
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:5364) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 1)
+(node:5364) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+
+  Rendered articles/index.html.haml within layouts/application (919.2ms)
+Completed 200 OK in 1054ms (Views: 1047.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/comments.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2023-05-17 21:47:34 +0700
+
+
+Started GET "/assets/turbolinks.self-569ee74eaa15c1e2019317ff770b8769b1ec033a0f572a485f64c82ddc8f989e.js?body=1" for ::1 at 2023-05-17 21:47:34 +0700
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2023-05-17 21:47:34 +0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2023-05-17 21:47:34 +0700
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2023-05-17 21:47:34 +0700
+
+
+Started GET "/assets/articles.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2023-05-17 21:47:34 +0700
+
+
+Started GET "/assets/articles.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2023-05-17 21:47:34 +0700
+
+
+Started GET "/assets/comments.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2023-05-17 21:47:34 +0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2023-05-17 21:47:34 +0700
+
+
+Started GET "/" for ::1 at 2023-05-17 21:48:13 +0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ArticlesController#index as HTML
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+Hash: fa068e04eb2ae1429067
+Version: webpack 4.46.0
+Time: 182ms
+Built at: 05/17/2023 9:48:14 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-154c20c03dd79de10eb8.js   9.63 KiB  application  [emitted] [immutable]  application
+js/application-154c20c03dd79de10eb8.js.map   3.53 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-154c20c03dd79de10eb8.js js/application-154c20c03dd79de10eb8.js.map
+[./app/javascript/packs/application.js] 5.74 KiB {application} [built] [failed] [1 error]
+
+ERROR in ./app/javascript/packs/application.js
+Module build failed (from ./node_modules/babel-loader/lib/index.js):
+Error: Cannot find package 'babel-plugin-transform-object-rest-spread' imported from /Users/karimhartono/blwork/workspace/learn-haml/blog/babel-virtual-resolve-base.js
+    at __node_internal_ (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/vendor/import-meta-resolve.js:233:9)
+    at new NodeError (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/vendor/import-meta-resolve.js:203:5)
+    at packageResolve (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/vendor/import-meta-resolve.js:872:9)
+    at moduleResolve (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/vendor/import-meta-resolve.js:901:20)
+    at defaultResolve (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/vendor/import-meta-resolve.js:984:15)
+    at resolve (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/vendor/import-meta-resolve.js:998:12)
+    at resolve (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/files/import-meta-resolve.js:13:10)
+    at tryImportMetaResolve (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/files/plugins.js:123:45)
+    at resolveStandardizedNameForImport (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/files/plugins.js:145:19)
+    at resolveStandardizedName (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/files/plugins.js:154:12)
+    at loadPlugin (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/files/plugins.js:47:20)
+    at loadPlugin.next (<anonymous>)
+    at createDescriptor (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/config-descriptors.js:139:16)
+    at createDescriptor.next (<anonymous>)
+    at step (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:261:32)
+    at evaluateAsync (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:291:5)
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:44:11
+    at Array.forEach (<anonymous>)
+    at Function.async (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:43:15)
+    at Function.all (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:216:13)
+    at Generator.next (<anonymous>)
+    at createDescriptors (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/config-descriptors.js:101:41)
+    at createDescriptors.next (<anonymous>)
+    at createPluginDescriptors (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/config-descriptors.js:98:17)
+    at createPluginDescriptors.next (<anonymous>)
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/gensync-utils/functional.js:21:23
+    at Generator.next (<anonymous>)
+    at mergeChainOpts (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/config-chain.js:349:34)
+    at mergeChainOpts.next (<anonymous>)
+    at chainWalker (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/config-chain.js:316:14)
+    at chainWalker.next (<anonymous>)
+    at loadFileChain (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/config-chain.js:192:24)
+    at loadFileChain.next (<anonymous>)
+    at buildRootChain (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/config-chain.js:109:31)
+    at buildRootChain.next (<anonymous>)
+    at loadPrivatePartialConfig (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/partial.js:79:62)
+    at loadPrivatePartialConfig.next (<anonymous>)
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/partial.js:122:25
+    at Generator.next (<anonymous>)
+    at step (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:269:25)
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:273:13
+    at async.call.result.err.err (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:223:11)
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:50:45
+    at step (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:287:14)
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:273:13
+    at async.call.result.err.err (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:223:11)
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:189:28
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/gensync-utils/async.js:68:7
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:113:33
+    at step (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:287:14)
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:273:13
+    at async.call.result.err.err (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:223:11)
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:189:28
+    at FSReqCallback.readFileAfterClose [as oncomplete] (internal/fs/read_file_context.js:63:3)
+
+(node:5690) UnhandledPromiseRejectionWarning: Error: Cannot find package 'babel-plugin-transform-object-rest-spread' imported from /Users/karimhartono/blwork/workspace/learn-haml/blog/babel-virtual-resolve-base.js
+    at __node_internal_ (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/vendor/import-meta-resolve.js:233:9)
+    at new NodeError (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/vendor/import-meta-resolve.js:203:5)
+    at packageResolve (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/vendor/import-meta-resolve.js:872:9)
+    at moduleResolve (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/vendor/import-meta-resolve.js:901:20)
+    at defaultResolve (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/vendor/import-meta-resolve.js:984:15)
+    at resolve (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/vendor/import-meta-resolve.js:998:12)
+    at resolve (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/files/import-meta-resolve.js:13:10)
+    at tryImportMetaResolve (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/files/plugins.js:123:45)
+    at resolveStandardizedNameForImport (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/files/plugins.js:145:19)
+    at resolveStandardizedName (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/files/plugins.js:154:12)
+    at loadPlugin (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/files/plugins.js:47:20)
+    at loadPlugin.next (<anonymous>)
+    at createDescriptor (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/config-descriptors.js:139:16)
+    at createDescriptor.next (<anonymous>)
+    at step (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:261:32)
+    at evaluateAsync (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:291:5)
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:44:11
+    at Array.forEach (<anonymous>)
+    at Function.async (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:43:15)
+    at Function.all (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:216:13)
+    at Generator.next (<anonymous>)
+    at createDescriptors (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/config-descriptors.js:101:41)
+    at createDescriptors.next (<anonymous>)
+    at createPluginDescriptors (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/config-descriptors.js:98:17)
+    at createPluginDescriptors.next (<anonymous>)
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/gensync-utils/functional.js:21:23
+    at Generator.next (<anonymous>)
+    at mergeChainOpts (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/config-chain.js:349:34)
+    at mergeChainOpts.next (<anonymous>)
+    at chainWalker (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/config-chain.js:316:14)
+    at chainWalker.next (<anonymous>)
+    at loadFileChain (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/config-chain.js:192:24)
+    at loadFileChain.next (<anonymous>)
+    at buildRootChain (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/config-chain.js:109:31)
+    at buildRootChain.next (<anonymous>)
+    at loadPrivatePartialConfig (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/partial.js:79:62)
+    at loadPrivatePartialConfig.next (<anonymous>)
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/config/partial.js:122:25
+    at Generator.next (<anonymous>)
+    at step (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:269:25)
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:273:13
+    at async.call.result.err.err (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:223:11)
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:50:45
+    at step (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:287:14)
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:273:13
+    at async.call.result.err.err (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:223:11)
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:189:28
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/@babel/core/lib/gensync-utils/async.js:68:7
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:113:33
+    at step (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:287:14)
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:273:13
+    at async.call.result.err.err (/Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:223:11)
+    at /Users/karimhartono/blwork/workspace/learn-haml/blog/node_modules/gensync/index.js:189:28
+    at FSReqCallback.readFileAfterClose [as oncomplete] (internal/fs/read_file_context.js:63:3)
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:5690) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 1)
+(node:5690) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+
+  Rendered articles/index.html.haml within layouts/application (884.4ms)
+Completed 200 OK in 1025ms (Views: 1018.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/articles.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2023-05-17 21:48:15 +0700
+
+
+Started GET "/assets/comments.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2023-05-17 21:48:15 +0700
+
+
+Started GET "/assets/turbolinks.self-569ee74eaa15c1e2019317ff770b8769b1ec033a0f572a485f64c82ddc8f989e.js?body=1" for ::1 at 2023-05-17 21:48:15 +0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2023-05-17 21:48:15 +0700
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2023-05-17 21:48:15 +0700
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2023-05-17 21:48:15 +0700
+
+
+Started GET "/assets/articles.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2023-05-17 21:48:15 +0700
+
+
+Started GET "/assets/comments.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2023-05-17 21:48:15 +0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2023-05-17 21:48:15 +0700
+
+
+Started GET "/" for ::1 at 2023-06-02 15:48:35 +0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ArticlesController#index as HTML
+  Rendered articles/index.html.haml within layouts/application (4.8ms)
+Completed 200 OK in 230ms (Views: 222.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2023-06-02 15:48:36 +0700
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2023-06-02 15:48:36 +0700
+
+
+Started GET "/assets/turbolinks.self-569ee74eaa15c1e2019317ff770b8769b1ec033a0f572a485f64c82ddc8f989e.js?body=1" for ::1 at 2023-06-02 15:48:36 +0700
+
+
+Started GET "/assets/articles.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2023-06-02 15:48:36 +0700
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2023-06-02 15:48:36 +0700
+
+
+Started GET "/assets/comments.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2023-06-02 15:48:36 +0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2023-06-02 15:48:36 +0700
+
+
+Started GET "/" for ::1 at 2023-06-02 15:49:08 +0700
+Processing by ArticlesController#index as HTML
+  Rendered articles/index.html.haml within layouts/application (3.4ms)
+Completed 200 OK in 26ms (Views: 20.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2023-06-03 18:19:11 +0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ArticlesController#index as HTML
+  Rendered articles/index.html.haml within layouts/application (5.2ms)
+Completed 200 OK in 127ms (Views: 119.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2023-06-03 18:19:12 +0700
+
+
+Started GET "/" for ::1 at 2023-06-03 18:19:28 +0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ArticlesController#index as HTML
+  Rendered articles/index.html.haml within layouts/application (4.1ms)
+Completed 200 OK in 127ms (Views: 119.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2023-06-03 18:20:46 +0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ArticlesController#index as HTML
+  Rendered articles/index.html.haml within layouts/application (4.6ms)
+Completed 200 OK in 131ms (Views: 123.5ms | ActiveRecord: 0.0ms)

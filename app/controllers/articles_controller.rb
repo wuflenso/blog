@@ -16,6 +16,9 @@ class ArticlesController < ApplicationController
   except: [:index,:show]
 
   def index
+    puts "PRINTER #{'masaaaa'}"
+    mot = Motor.new()
+    puts mot.brand
     @articles = Article.all
   end
 

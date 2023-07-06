@@ -1,2 +1,6 @@
 # build results
 tmp
+node_modules/*
+/public/packs
+/public/packs-test
+/node_modules
